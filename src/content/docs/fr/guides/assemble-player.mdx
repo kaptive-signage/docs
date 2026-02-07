@@ -1,0 +1,150 @@
+---
+title: Assembler votre propre player
+description: Apprenez à assembler votre propre matériel de player Kaptive.
+---
+
+import { Steps } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+
+
+# Matériel
+
+Pour assembler votre propre player Kaptive, nous recommandons d'utiliser un kit de développement Compute Module 5 de Raspberry Pi. Le kit comprend tout ce dont vous avez besoin pour commencer :
+
+![Kit de développement Raspberry Pi Compute Module 5](../../../../assets/assemble-player/1.jpeg)
+
+## Installer le Compute Module sur la carte IO
+
+<Steps>
+    1. Dévissez les 2 vis de chaque côté du boîtier pour l'ouvrir.
+       
+       <Aside> Faites attention en ouvrant le boîtier, le ventilateur est relié à la carte IO par un câble. </Aside>
+
+       ![Ouvrir le boîtier](../../../../assets/assemble-player/2.jpeg)
+
+    2. Dévissez la carte IO du boîtier en utilisant les 4 vis situées aux coins du circuit imprimé.
+
+    3. Insérez le Compute Module dans le support de la carte IO en veillant à l'aligner correctement. Il doit s'enclencher.
+       
+       ![Insérer le Compute Module](../../../../assets/assemble-player/3.jpeg)
+    
+</Steps>
+
+## Installer le dissipateur de chaleur Raspberry Pi
+
+<Steps>
+    1. Prenez les 4 petites entretoises en plastique et insérez-les entre le Compute Module et la carte IO, en les alignant avec les trous de vis.
+
+       
+
+    2. Passez les vis à travers la carte IO et les entretoises jusqu'au Compute Module.
+       
+       ![Insérer les entretoises](../../../../assets/assemble-player/4.jpeg)
+
+    3. Placez le dissipateur sur le Compute Module et serrez les vis pour le fixer en place.
+
+       ![Installer le dissipateur](../../../../assets/assemble-player/5.jpeg)
+</Steps>
+
+## (Facultatif) Installer l'antenne Wi‑Fi
+
+Si vous souhaitez utiliser la connectivité Wi‑Fi, vous pouvez installer l'antenne fournie. Encliquetez simplement l'antenne sur le connecteur prévu de la carte IO et vissez-la à l'arrière du boîtier.
+
+![Installer l’antenne](../../../../assets/assemble-player/6.jpeg)
+
+## Retirer le ventilateur actif
+
+Il existe un défaut de conception dans le boîtier du Raspberry Pi Compute Module 5 qui empêche d'utiliser simultanément le ventilateur actif et le dissipateur passif. Pour garantir des performances de refroidissement fiables, nous recommandons de retirer complètement le ventilateur actif et d'utiliser uniquement le dissipateur passif.
+
+Pour retirer le ventilateur, débranchez simplement le câble d'alimentation du ventilateur de la carte IO et dévissez le ventilateur du boîtier.
+
+![Retirer le ventilateur](../../../../assets/assemble-player/7.jpeg)
+
+## Flasher le système d’exploitation
+
+<Steps>
+
+    1. Pour flasher le système d’exploitation sur votre Compute Module, vous devez d’abord ajouter un jumper sur l’en-tête `eMMC_BOOT_DISABLE` de la carte IO. Cela permettra au module de démarrer via l’USB.
+
+       ![Ajouter un jumper](../../../../assets/assemble-player/8.png)
+
+    2. Préparer l’appareil hôte
+       <Tabs>
+            <TabItem label="macOS">
+
+
+                Pour configurer un appareil hôte sous macOS :
+
+                    1. D'abord, [compiler rpiboot depuis les sources](https://github.com/raspberrypi/usbboot?tab=readme-ov-file#macos).
+
+                    2. Connectez la carte IO au Mac.
+
+                    3. Exécutez ensuite l'exécutable rpiboot avec la commande suivante :
+
+                       ```rpiboot -d mass-storage-gadget64```
+
+                    4. Une fois la commande terminée, un message doit apparaître indiquant « Le disque que vous avez inséré n’est pas lisible par cet ordinateur. ». Cliquez sur Ignorer. Votre Compute Module devrait maintenant apparaître comme un périphérique de stockage de masse.
+
+            </TabItem>
+            <TabItem label="Windows">
+
+
+                Pour configurer un appareil hôte sous Windows 11 :
+
+                    1. Téléchargez le [programme d’installation Windows](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe) ou [compilez rpiboot depuis les sources](https://github.com/raspberrypi/usbboot).
+
+                    2. Double-cliquez sur l’installateur pour le lancer. Cela installe les pilotes et l’outil de démarrage. Ne fermez pas les fenêtres d’installation de pilotes qui peuvent apparaître pendant le processus.
+
+                    3. Redémarrez.
+
+                    4. Connectez la carte IO au PC. Windows doit détecter le matériel et configurer les pilotes requis.
+
+                    5. Sélectionnez « Raspberry Pi - Mass Storage Gadget - 64-bit » depuis le menu Démarrer. Après quelques secondes, l’eMMC ou le NVMe du Compute Module apparaîtra comme un périphérique de stockage de masse USB. Cela fournit également une console de débogage en tant que port série.
+
+
+            </TabItem>
+            <TabItem label="Linux">
+            
+                Pour configurer un appareil hôte sous Linux :
+
+                    1. Exécutez la commande suivante pour installer rpiboot (ou, alternativement, compilez rpiboot depuis les sources) :
+
+                       ```sudo apt install rpiboot```
+
+                    2. Connectez la carte IO au PC.
+
+                    3. Exécutez ensuite rpiboot :
+
+                       ```sudo rpiboot```
+
+                    4. Après quelques secondes, le Compute Module devrait apparaître comme un périphérique de stockage de masse. Vérifiez le répertoire /dev/ (probablement /dev/sda ou /dev/sdb) pour le périphérique. Vous pouvez aussi exécuter lsblk et rechercher un périphérique dont la capacité de stockage correspond à celle de votre Compute Module.
+
+            </TabItem>
+       </Tabs>
+
+       [Source : Documentation Raspberry Pi](https://www.raspberrypi.com/documentation/computers/compute-module.html#set-up-the-host-device)
+    
+    3. Flashez l’image Kaptive OS sur le Compute Module à l'aide de [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
+
+        1. Sélectionnez l’appareil : Raspberry Pi 5
+           ![Sélectionner l’appareil](../../../../assets/assemble-player/rpi-1.png)
+        2. Sélectionnez l’OS : Vous trouverez l’image du player Kaptive sous `Freemium and paid-for OS` > `Digital Signage OS` > `Kaptive player`
+           ![Sélectionner l’OS](../../../../assets/assemble-player/rpi-2.png)
+        3. Sélectionnez le Compute Module comme périphérique de stockage.
+        4. (Facultatif) Personnalisez les paramètres de l’OS.
+           <Aside type="danger">Le nom d’utilisateur ne peut pas être modifié et doit toujours être `Kaptive`.</Aside>
+        5. Cliquez sur `Write` pour flasher l’OS sur le Compute Module.
+
+    4. Une fois le processus de flash terminé, retirez le jumper de l’en-tête `eMMC_BOOT_DISABLE`.
+       <Aside> Laisser le jumper en place empêchera le module de démarrer sur le système Kaptive OS.</Aside>
+</Steps>
+
+## Assemblage final et premier démarrage
+
+Une fois l’OS flashé, vous pouvez remonter le boîtier en revissant la carte IO dans le boîtier, puis en refermant le boîtier.
+
+Branchez l’alimentation au player et mettez-le sous tension. Le player doit démarrer sur Kaptive OS et être prêt à l’emploi.
+
+<Aside> Au premier démarrage, le player peut prendre quelques minutes pour terminer les tâches d’initialisation. Merci de patienter durant ce processus. </Aside>

@@ -1,0 +1,150 @@
+---
+title: Eigenen Player zusammenbauen
+description: Lernen Sie, Ihre eigene Kaptive-Player-Hardware zusammenzubauen.
+---
+
+import { Steps } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+
+
+# Material
+
+Um Ihren eigenen Kaptive‑Player zusammenzubauen, empfehlen wir das Compute Module 5 Developer Kit von Raspberry Pi. Das Kit enthält alles, was Sie für den Start benötigen:
+
+![Raspberry Pi Compute Module 5 Developer Kit](../../../../assets/assemble-player/1.jpeg)
+
+## Compute Module auf dem IO‑Board installieren
+
+<Steps>
+    1. Lösen Sie die 2 Schrauben auf jeder Seite des Gehäuses, um es zu öffnen.
+       
+       <Aside> Seien Sie beim Öffnen vorsichtig: Der Lüfter ist mit einem Kabel mit dem IO‑Board verbunden. </Aside>
+
+       ![Gehäuse öffnen](../../../../assets/assemble-player/2.jpeg)
+
+    2. Schrauben Sie das IO‑Board mit den 4 Schrauben an den Ecken der Leiterplatte aus dem Gehäuse.
+
+    3. Stecken Sie das Compute Module in den Sockel des IO‑Boards und richten Sie es korrekt aus. Es sollte einrasten.
+       
+       ![Compute Module einsetzen](../../../../assets/assemble-player/3.jpeg)
+    
+</Steps>
+
+## Raspberry‑Pi‑Kühlkörper installieren
+
+<Steps>
+    1. Nehmen Sie die 4 kleinen Kunststoff‑Abstandshalter und setzen Sie sie zwischen Compute Module und IO‑Board, ausgerichtet zu den Schraublöchern.
+
+       
+
+    2. Führen Sie die Schrauben durch das IO‑Board und die Abstandshalter in das Compute Module.
+       
+       ![Abstandshalter einsetzen](../../../../assets/assemble-player/4.jpeg)
+
+    3. Setzen Sie den Kühlkörper auf das Compute Module und ziehen Sie die Schrauben fest, um ihn zu sichern.
+
+       ![Kühlkörper montieren](../../../../assets/assemble-player/5.jpeg)
+</Steps>
+
+## (Optional) WLAN‑Antenne installieren
+
+Wenn Sie WLAN nutzen möchten, können Sie die mitgelieferte Antenne montieren. Klicken Sie die Antenne einfach auf den vorgesehenen Anschluss am IO‑Board und schrauben Sie sie an der Rückseite des Gehäuses fest.
+
+![Antenne montieren](../../../../assets/assemble-player/6.jpeg)
+
+## Aktiven Lüfter entfernen
+
+Es gibt einen Konstruktionsfehler im Gehäuse des Raspberry Pi Compute Module 5, der verhindert, dass der aktive Lüfter und der passive Kühlkörper gleichzeitig verwendet werden können. Um eine zuverlässige Kühlleistung sicherzustellen, empfehlen wir, den aktiven Lüfter vollständig zu entfernen und nur den passiven Kühlkörper zu verwenden.
+
+Um den Lüfter zu entfernen, trennen Sie einfach das Stromkabel des Lüfters vom IO‑Board und schrauben Sie den Lüfter aus dem Gehäuse.
+
+![Lüfter entfernen](../../../../assets/assemble-player/7.jpeg)
+
+## Betriebssystem flashen
+
+<Steps>
+
+    1. Um das Betriebssystem auf Ihr Compute Module zu flashen, müssen Sie zunächst einen Jumper auf die Stiftleiste `eMMC_BOOT_DISABLE` des IO‑Boards setzen. Dadurch kann das Compute Module von USB booten.
+
+       ![Jumper setzen](../../../../assets/assemble-player/8.png)
+
+    2. Hostgerät vorbereiten
+       <Tabs>
+            <TabItem label="macOS">
+
+
+                So richten Sie ein Hostgerät unter macOS ein:
+
+                    1. Zuerst [rpiboot aus dem Quellcode bauen](https://github.com/raspberrypi/usbboot?tab=readme-ov-file#macos).
+
+                    2. Verbinden Sie das IO‑Board mit dem Mac.
+
+                    3. Führen Sie anschließend die rpiboot‑Anwendung mit folgendem Befehl aus:
+
+                       ```rpiboot -d mass-storage-gadget64```
+
+                    4. Nach Abschluss der Ausführung sollte die Meldung erscheinen: „The disk you inserted was not readable by this computer.“ Klicken Sie auf Ignore. Ihr Compute Module sollte nun als Massenspeichergerät erscheinen.
+
+            </TabItem>
+            <TabItem label="Windows">
+
+
+                So richten Sie ein Hostgerät unter Windows 11 ein:
+
+                    1. Laden Sie den [Windows‑Installer](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe) herunter oder [bauen Sie rpiboot aus dem Quellcode](https://github.com/raspberrypi/usbboot).
+
+                    2. Doppelklicken Sie auf den Installer, um ihn zu starten. Dadurch werden die Treiber und das Boot‑Tool installiert. Schließen Sie während der Installation keine Treiberfenster.
+
+                    3. Starten Sie den Rechner neu.
+
+                    4. Verbinden Sie das IO‑Board mit dem PC. Windows sollte die Hardware erkennen und die benötigten Treiber einrichten.
+
+                    5. Wählen Sie im Startmenü „Raspberry Pi - Mass Storage Gadget - 64-bit“. Nach einigen Sekunden erscheinen das eMMC oder NVMe des Compute Module als USB‑Massenspeichergeräte. Zusätzlich steht eine Debug‑Konsole als serielles Schnittstellen‑Gerät zur Verfügung.
+
+
+            </TabItem>
+            <TabItem label="Linux">
+            
+                So richten Sie ein Hostgerät unter Linux ein:
+
+                    1. Führen Sie folgenden Befehl aus, um rpiboot zu installieren (alternativ rpiboot aus dem Quellcode bauen):
+
+                       ```sudo apt install rpiboot```
+
+                    2. Verbinden Sie das IO‑Board mit dem PC.
+
+                    3. Führen Sie anschließend rpiboot aus:
+
+                       ```sudo rpiboot```
+
+                    4. Nach einigen Sekunden sollte das Compute Module als Massenspeichergerät erscheinen. Prüfen Sie das Verzeichnis /dev/ (vermutlich /dev/sda oder /dev/sdb). Alternativ führen Sie lsblk aus und suchen ein Gerät mit einer Speicherkapazität, die der Ihres Compute Module entspricht.
+
+            </TabItem>
+       </Tabs>
+
+       [Quelle: Raspberry Pi Dokumentation](https://www.raspberrypi.com/documentation/computers/compute-module.html#set-up-the-host-device)
+    
+    3. Flashen Sie das Kaptive‑OS‑Image auf das Compute Module mit dem [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
+
+        1. Gerät auswählen: Raspberry Pi 5
+           ![Gerät auswählen](../../../../assets/assemble-player/rpi-1.png)
+        2. OS auswählen: Sie finden das Kaptive‑Player‑Image unter `Freemium and paid-for OS` > `Digital Signage OS` > `Kaptive player`.
+           ![OS auswählen](../../../../assets/assemble-player/rpi-2.png)
+        3. Wählen Sie das Compute Module als Speichermedium aus.
+        4. (Optional) Passen Sie die OS‑Einstellungen an.
+           <Aside type="danger">Der Benutzername kann nicht geändert werden und muss immer `Kaptive` lauten.</Aside>
+        5. Klicken Sie auf `Write`, um das OS auf das Compute Module zu flashen.
+
+    4. Entfernen Sie nach Abschluss des Flash‑Vorgangs den Jumper von der Stiftleiste `eMMC_BOOT_DISABLE`.
+       <Aside> Ein gesetzter Jumper verhindert, dass das Compute Module in das Kaptive OS bootet.</Aside>
+</Steps>
+
+## Endmontage und erster Start
+
+Sobald das OS geflasht ist, können Sie das Gehäuse wieder zusammensetzen, indem Sie das IO‑Board in das Gehäuse schrauben und das Gehäuse schließen.
+
+Schließen Sie das Netzteil an den Player an und schalten Sie ihn ein. Der Player sollte in das Kaptive OS booten und einsatzbereit sein.
+
+<Aside> Beim ersten Start kann der Player einige Minuten für die anfängliche Einrichtung benötigen. Bitte haben Sie etwas Geduld. </Aside>

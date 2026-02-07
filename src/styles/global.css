@@ -1,0 +1,105 @@
+@layer base, starlight, theme, components, utilities;
+
+@import "@astrojs/starlight-tailwind";
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+
+:root {
+
+  /* kaptive */
+  --color-orange-50: #fef6ee;
+  --color-orange-100: #fdebd7;
+  --color-orange-200: #fbd2ad;
+  --color-orange-300: #f7b27a;
+  --color-orange-400: #f38844;
+  --color-orange-500: #f06a22;
+  --color-orange-600: #e14f15;
+  --color-orange-700: #bb3a13;
+  --color-orange-800: #943018;
+  --color-orange-900: #782916;
+  --color-orange-950: #411209;
+
+  --color-ecru-50: #f9f8f1;
+  --color-ecru-100: #f2f0e3;
+  --color-ecru-200: #d9d4ae;
+  --color-ecru-300: #c6ba83;
+  --color-ecru-400: #b8a767;
+  --color-ecru-500: #ac9154;
+  --color-ecru-600: #987747;
+  --color-ecru-700: #7f5e3e;
+  --color-ecru-800: #694d37;
+  --color-ecru-900: #574130;
+  --color-ecru-950: #312217;
+
+  --color-success: #4caf50;
+
+  --scale-factor: 1;
+  --radius: 0.625rem;
+  --background: oklch(0.9800 0.0040 99.9800);
+  --foreground: oklch(0.3438 0.0269 95.7226);
+  --card: oklch(100% 0 0);
+  --card-foreground: oklch(0.1908 0.0020 106.5859);
+  --popover: oklch(1 0 70);
+  --popover-foreground: oklch(0.2671 0.0196 98.9390);
+  --primary: oklch(0.6800 0.1827 44.1800);
+  --primary-foreground: oklch(0.9850 0 0);
+  --secondary: oklch(0.95 0.0329 70.34);
+  --secondary-foreground: oklch(0.4334 0.0177 98.6048);
+  --muted: oklch(0.9341 0.0153 90.2390);
+  --muted-foreground: oklch(0.6059 0.0075 97.4233);
+  --accent: oklch(0.9563 0.0080 98.8792);
+  --accent-foreground: oklch(0.2671 0.0196 98.9390);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(1.0000 0 0);
+  --border: oklch(0.8847 0.0069 97.3627);
+  --input: oklch(0.7621 0.0156 98.3528);
+  --ring: oklch(0.6800 0.1827 44.1800);
+  --chart-1: oklch(0.5583 0.1276 42.9956);
+  --chart-2: oklch(0.6898 0.1581 290.4107);
+  --chart-3: oklch(0.8816 0.0276 93.1280);
+  --chart-4: oklch(0.8822 0.0403 298.1792);
+  --chart-5: oklch(0.5608 0.1348 42.0584);
+  --sidebar: oklch(0.9663 0.0080 98.8792);
+  --sidebar-foreground: oklch(0.3590 0.0051 106.6524);
+  --sidebar-primary: oklch(0.6800 0.1827 44.1800);
+  --sidebar-primary-foreground: oklch(0.9881 0 0);
+  --sidebar-accent: oklch(0.9245 0.0138 92.9892);
+  --sidebar-accent-foreground: oklch(0.3250 0 0);
+  --sidebar-border: oklch(0.8847 0.0069 97.3627);
+  --sidebar-ring: oklch(0.7731 0 0);
+
+  --sl-nav-pad-y: 1.2rem;
+  --sl-color-text-invert: var(--primary-foreground);
+  --sl-color-hairline: var(--sidebar-border);
+  --sl-badge-default-bg: var(--primary);
+  --sl-badge-default-border: var(--primary);
+  --sl-badge-default-text: var(--primary-foreground);
+
+  --sl-text-h1: 2rem;
+  --sl-text-h2: 1.5rem;
+  --sl-text-h3: 1.25rem;
+  --sl-text-h4: 1.125rem;
+  --sl-text-h5: 1rem;
+
+}
+
+@theme {
+  --color-accent-200: var(--primary);
+  --color-accent-500: var(--primary);
+  --color-accent-600: var(--primary);
+  /* Your preferred gray scale. Zinc is closest to Starlight’s defaults. */
+  --color-gray-50: var(--color-green-50);
+  --color-gray-100: var(--background);
+  --color-gray-200: var(--color-zinc-200);
+  --color-gray-300: var(--color-zinc-300);
+  --color-gray-400: var(--color-zinc-400);
+  --color-gray-500: var(--color-zinc-500);
+  --color-gray-600: var(--color-zinc-600);
+  --color-gray-700: var(--color-zinc-700);
+  --color-gray-800: var(--color-zinc-800);
+  --color-gray-900: var(--color-zinc-900);
+  --color-gray-950: var(--color-zinc-950);
+
+  
+}
