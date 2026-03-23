@@ -15,7 +15,8 @@ These are the ONLY correct names. Never invent alternatives.
 | **Kaptive Web** | The browser-based player at player.kaptive.app. | web player, Web Player, browser player, online player |
 | **Kaptive iOS** | The iOS application for playing content on iPads. | iOS player, iPad player, mobile player |
 | **Players** | Only used when speaking in a sentence about several different Players, like in normal English. | Never use the single player word to describe a specific Player.|
-| **Kaptive Editor** | The web-based project creation and editing interface at kaptive.app. | editor, project editor, the editor (without "Kaptive") |
+| **Kaptive Manager** | The web dashboard at kaptive.app where you manage Projects, Players, Schedules, and account settings. | dashboard, admin panel, control panel, back office |
+| **Kaptive Editor** | The web-based project creation and editing interface within Kaptive Manager. | editor, project editor, the editor (without "Kaptive") |
 | **Kaptive OS** | The operating system flashed onto Kaptive Player hardware. | kaptive OS, KaptiveOS, player OS |
 | **Kaptive Account** | A user's account on the platform. | account (standalone in ambiguous contexts) |
 
@@ -27,6 +28,8 @@ These are the ONLY correct names. Never invent alternatives.
 ---
 
 ## Feature Terminology
+
+When these terms refer to the Kaptive concept, they are **always capitalized** (e.g. "your Project", "a Page", "the Schedule"). Lowercase is only acceptable when the word is used in a generic, non-Kaptive sense (rare).
 
 | Correct Term | Definition | Notes |
 |---|---|---|
@@ -69,7 +72,7 @@ Use these exact URLs. Never guess or invent URLs.
 
 | Service | URL |
 |---|---|
-| Kaptive Editor (Editor, Dashboard) | `https://kaptive.app` |
+| Kaptive Manager (Manager, Editor, Dashboard) | `https://kaptive.app` |
 | Kaptive Web | `https://player.kaptive.app` |
 | Device Verification | `https://kaptive.app/verify` |
 | Kaptive Website | `https://kaptive.ch` |
@@ -106,7 +109,7 @@ Never leave "contact us" as plain, unlinked text.
 ### Formatting Rules
 - Button and UI element names: backtick-wrapped (`Assign`).
 - File paths and code: code blocks.
-- Key terms on first use in a section: **bold**.
+- Kaptive product and feature names are already capitalized — do not bold them. Reserve bold for emphasis on non-Kaptive terms only.
 - Image alt text: always descriptive, never empty.
 - Links: use descriptive text, never "click here".
 
@@ -165,23 +168,23 @@ All English headings, sidebar labels, and page titles use **Title Case**:
 
 French headings, sidebar labels, and page titles use **sentence case**: capitalize only the first word and proper nouns. Common nouns are lowercase, even if they are capitalized in English.
 
-- Capitalize: first word of the title, brand names (Kaptive, Player when referring to a Kaptive product).
-- Lowercase: all common nouns, adjectives, verbs (after the first word).
+- Capitalize: first word of the title, brand names (Kaptive, Player), and **all Kaptive feature terms** (Projet, Page, Contenu, Schedule, Workspace, Alerte, Licence, Interactivité, Style de Page, Élément de Contenu).
+- Lowercase: all other common nouns, adjectives, verbs (after the first word).
 
 | Correct | Wrong |
 |---|---|
 | Premiers pas | Premiers Pas |
-| Créer un projet | Créer un Projet |
-| Personnaliser le style de la page | Personnaliser le Style de la Page |
-| Ajouter de l'interactivité | Ajouter de l'Interactivité |
-| Assigner votre projet | Assigner votre Projet |
-| Planifier votre projet | Planifier votre Projet |
+| Créer un Projet | Créer un projet |
+| Personnaliser le Style de la Page | Personnaliser le style de la page |
+| Ajouter de l'Interactivité | Ajouter de l'interactivité |
+| Assigner votre Projet | Assigner votre projet |
+| Planifier votre Projet | Planifier votre projet |
 | Connecter un Player | Connecter un player |
-| Création de contenu | Création de Contenu |
+| Création de Contenu | Création de contenu |
 | Assembler votre propre Player | Assembler votre propre player |
-| Créer une alerte | Créer une Alerte |
+| Créer une Alerte | Créer une alerte |
 
-**Exception**: "Player" stays capitalized in French because it is a Kaptive product name, not a common French noun. Same for "Kaptive", "Alert" when used as a product feature name in the interface.
+**Kaptive feature terms** (Projet, Page, Contenu, Alerte, Schedule, Workspace, Licence, Interactivité, etc.) are treated as proper nouns in French and are **always capitalized**, just like "Player" and "Kaptive" themselves.
 
 ### German — Nouns Capitalized (Standard German Rules)
 

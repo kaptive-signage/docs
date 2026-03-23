@@ -56,10 +56,10 @@ export default defineConfig({
           },
           items: [
             {
-              label: "Account & Licence",
+              label: "Account & Licences",
               translations: {
-                fr: "Compte & licence",
-                de: "Konto & Lizenz",
+                fr: "Compte & Licences",
+                de: "Konto & Lizenzen",
               },
               slug: "getting-started/account-and-licence",
             },
@@ -74,7 +74,7 @@ export default defineConfig({
             {
               label: "Create a Project",
               translations: {
-                fr: "Créer un projet",
+                fr: "Créer un Projet",
                 de: "Projekt erstellen",
               },
               slug: "getting-started/create-project",
@@ -82,7 +82,7 @@ export default defineConfig({
             {
               label: "Customize Page Style",
               translations: {
-                fr: "Personnaliser le style de la page",
+                fr: "Personnaliser le Style de la Page",
                 de: "Seitenstil anpassen",
               },
               slug: "getting-started/customize-page-style",
@@ -90,7 +90,7 @@ export default defineConfig({
             {
               label: "Add Interactivity",
               translations: {
-                fr: "Ajouter de l'interactivité",
+                fr: "Ajouter de l'Interactivité",
                 de: "Interaktivität hinzufügen",
               },
               slug: "getting-started/add-interactivity",
@@ -98,7 +98,7 @@ export default defineConfig({
             {
               label: "Assign your Project",
               translations: {
-                fr: "Assigner votre projet",
+                fr: "Assigner votre Projet",
                 de: "Projekt zuweisen",
               },
               slug: "getting-started/assign",
@@ -106,7 +106,7 @@ export default defineConfig({
             {
               label: "Schedule your Project",
               translations: {
-                fr: "Planifier votre projet",
+                fr: "Planifier votre Projet",
                 de: "Projekt planen",
               },
               slug: "getting-started/schedule",
@@ -123,7 +123,7 @@ export default defineConfig({
             // {
             //   label: "Assemble your own player",
             //   translations: {
-            //     fr: "Assembler votre propre player",
+            //     fr: "Assembler votre propre Player",
             //     de: "Eigenen Player zusammenbauen",
             //   },
             //   slug: "guides/assemble-player",
@@ -149,64 +149,64 @@ export default defineConfig({
                 },
               ],
             },
-            {
-              label: "Alerts",
-              translations: {
-                fr: "Alertes",
-                de: "Warnungen",
-              },
-              items: [
-                {
-                  label: "Create an Alert",
-                  translations: {
-                    fr: "Créer une alerte",
-                    de: "Eine Warnung erstellen",
-                  },
-                  slug: "guides/alerts/create-an-alert",
-                },
-                // {
-                //   label: "Connect the Alert to your Building Alarm",
-                //   translations: {
-                //     fr: "Connecter l'alerte à votre alarme de bâtiment",
-                //     de: "Warnung mit Gebäudealarm verbinden",
-                //   },
-                //   slug: "guides/alerts/connect-alert-to-building-alarm",
-                // },
-              ],
-            },
-            {
-              label: "Content Creation",
-              translations: {
-                fr: "Création de contenu",
-                de: "Inhaltserstellung",
-              },
-              items: [
-                {
-                  label: "Simple Digital Signage",
-                  translations: {
-                    fr: "Affichage dynamique simple",
-                    de: "Einfaches Digital Signage",
-                  },
-                  slug: "guides/content-creation/simple-digital-signage",
-                },
-                {
-                  label: "Interactive Digital Signage",
-                  translations: {
-                    fr: "Affichage dynamique interactif",
-                    de: "Interaktives Digital Signage",
-                  },
-                  slug: "guides/content-creation/interactive-digital-signage",
-                },
-                {
-                  label: "iPad Application Creation",
-                  translations: {
-                    fr: "Création d'application iPad",
-                    de: "iPad-Anwendung erstellen",
-                  },
-                  slug: "guides/content-creation/ipad-application-creation",
-                },
-              ],
-            },
+            // {
+            //   label: "Alerts",
+            //   translations: {
+            //     fr: "Alertes",
+            //     de: "Warnungen",
+            //   },
+            //   items: [
+            //     {
+            //       label: "Create an Alert",
+            //       translations: {
+            //         fr: "Créer une Alerte",
+            //         de: "Eine Warnung erstellen",
+            //       },
+            //       slug: "guides/alerts/create-an-alert",
+            //     },
+            //     // {
+            //     //   label: "Connect the Alert to your Building Alarm",
+            //     //   translations: {
+            //     //     fr: "Connecter l'Alerte à votre alarme de bâtiment",
+            //     //     de: "Warnung mit Gebäudealarm verbinden",
+            //     //   },
+            //     //   slug: "guides/alerts/connect-alert-to-building-alarm",
+            //     // },
+            //   ],
+            // },
+            // {
+            //   label: "Content Creation",
+            //   translations: {
+            //     fr: "Création de Contenu",
+            //     de: "Inhaltserstellung",
+            //   },
+            //   items: [
+            //     {
+            //       label: "Simple Digital Signage",
+            //       translations: {
+            //         fr: "Affichage dynamique simple",
+            //         de: "Einfaches Digital Signage",
+            //       },
+            //       slug: "guides/content-creation/simple-digital-signage",
+            //     },
+            //     {
+            //       label: "Interactive Digital Signage",
+            //       translations: {
+            //         fr: "Affichage dynamique interactif",
+            //         de: "Interaktives Digital Signage",
+            //       },
+            //       slug: "guides/content-creation/interactive-digital-signage",
+            //     },
+            //     {
+            //       label: "iPad Application Creation",
+            //       translations: {
+            //         fr: "Création d'application iPad",
+            //         de: "iPad-Anwendung erstellen",
+            //       },
+            //       slug: "guides/content-creation/ipad-application-creation",
+            //     },
+            //   ],
+            // },
           ],
         },
       ],

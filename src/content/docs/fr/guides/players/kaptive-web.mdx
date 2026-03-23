@@ -1,0 +1,31 @@
+---
+title: Kaptive Web
+description: Apprenez à utiliser Kaptive Web pour afficher du contenu dans n'importe quel navigateur.
+---
+
+import { Steps } from '@astrojs/starlight/components';
+
+Kaptive Web vous permet d'afficher votre Contenu Kaptive sur n'importe quel appareil disposant d'un navigateur web moderne. C'est une excellente option pour les appareils qui ne supportent pas le Kaptive Player ou pour les situations où vous souhaitez configurer rapidement un affichage sans matériel supplémentaire.
+
+Vous pouvez accéder à Kaptive Web à l'adresse [https://player.kaptive.app](https://player.kaptive.app). Pour le connecter à votre compte Kaptive :
+
+<Steps>
+    1. Ouvrez [https://player.kaptive.app](https://player.kaptive.app) sur votre appareil.
+    2. Scannez le QR code ou entrez le code manuellement sur [https://kaptive.app/verify](https://kaptive.app/verify).
+    3. Choisissez un nom pour votre instance Kaptive Web afin de l'identifier dans votre compte.
+    4. Sélectionnez le Workspace dans lequel vous souhaitez l'ajouter.
+    5. Cliquez sur `Verify Device`.
+ </Steps>
+
+Une fois connecté, le Player apparaît dans votre compte sous le Workspace sélectionné, et vous pouvez commencer à publier du Contenu dessus.
+
+## Limitations
+
+Kaptive Web est destiné aux tests et aux cas d'utilisation à petite échelle. Il n'offre pas le même niveau de performance, de fiabilité et de sécurité que le Kaptive Player.
+
+Kaptive Web présente les limitations suivantes par rapport au Kaptive Player :
+- Pas de support des captures d'écran ou de la gestion à distance des appareils.
+- Les performances peuvent varier en fonction de l'appareil et du navigateur utilisés.
+- Pas de support hors ligne, l'appareil doit être connecté à internet pour afficher du Contenu.
+- Pas de contrôles physiques de l'écran, tels que la gestion de l'alimentation ou des entrées.
+- Pas de mode kiosque, le navigateur doit être configuré manuellement pour fonctionner en mode plein écran et empêcher l'interaction de l'utilisateur avec l'interface du navigateur.
