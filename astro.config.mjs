@@ -149,6 +149,23 @@ export default defineConfig({
                 },
               ],
             },
+            {
+              label: "General",
+              translations: {
+                fr: "Général",
+                de: "Allgemein",
+              },
+              items: [
+                {
+                  label: "Find your Workspace ID",
+                  translations: {
+                    fr: "Trouver l'identifiant de votre Workspace",
+                    de: "Workspace-ID finden",
+                  },
+                  slug: "guides/general/find-workspace-id",
+                },
+              ],
+            },
             // {
             //   label: "Alerts",
             //   translations: {
