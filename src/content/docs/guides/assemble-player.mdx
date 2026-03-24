@@ -1,6 +1,6 @@
 ---
-title: Assemble your own player
-description: Learn how to assemble your own Kaptive player hardware.
+title: Assemble your Own Player
+description: Learn how to assemble your own Kaptive Player hardware.
 ---
 
 import { Steps } from '@astrojs/starlight/components';
@@ -9,24 +9,24 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 
 
 
-# Material
+## Material
 
-To assemble your own Kaptive player we recommend using a compute module 5 developer kit from Raspberry Pi. The kit includes everything you need to get started:
+To assemble your own Kaptive Player we recommend using a Compute Module 5 Developer Kit from Raspberry Pi. The kit includes everything you need to get started:
 
 ![Raspberry Pi Compute Module 5 Developer Kit](../../../assets/assemble-player/1.jpeg)
 
-## Install the compute module on the IO board
+## Install the Compute Module on the IO Board
 
 <Steps>
     1. Unscrew the 2 screws on each side of the case to open it.
        
-       <Aside> Be careful when opening the case, the fan is connected to the IO board with a cable. </Aside>
+       <Aside> Be careful when opening the case, the fan is connected to the IO Board with a cable. </Aside>
 
        ![Open case](../../../assets/assemble-player/2.jpeg)
 
     2. Unscrew the IO Board from the case using the 4 screws at the corner of the printed circuit board.
 
-    3. Insert the compute module into the IO board's socket, ensuring it is properly aligned. It should click into place.
+    3. Insert the Compute Module into the IO Board's socket, ensuring it is properly aligned. It should click into place.
        
        ![Insert compute module](../../../assets/assemble-player/3.jpeg)
     
@@ -35,26 +35,26 @@ To assemble your own Kaptive player we recommend using a compute module 5 develo
 ## Install the Raspberry Pi Cooler
 
 <Steps>
-    1. Take the 4 small plastic spacers and insert them between the compute module and the IO Board, aligning them with the screw holes.
+    1. Take the 4 small plastic spacers and insert them between the Compute Module and the IO Board, aligning them with the screw holes.
 
        
 
-    2. Place the screws through the IO board and spacers into the compute module
+    2. Place the screws through the IO Board and spacers into the Compute Module
        
        ![Insert spacers](../../../assets/assemble-player/4.jpeg)
 
-    3. Place the cooler on top of the compute module and tighten the screws to secure it in place.
+    3. Place the cooler on top of the Compute Module and tighten the screws to secure it in place.
 
        ![Install cooler](../../../assets/assemble-player/5.jpeg)
 </Steps>
 
-## (Optional) Install the WiFi antenna
+## (Optional) Install the Wi-Fi Antenna
 
-If you wish to use WiFi connectivity, you can install the included antenna. Simple click the antenna onto the designated connector on the IO board and screw it in place on the back of the case.
+If you wish to use Wi-Fi connectivity, you can install the included antenna. Simply click the antenna onto the designated connector on the IO Board and screw it in place on the back of the case.
 
 ![Install antenna](../../../assets/assemble-player/6.jpeg)
 
-## Remove the active cooling fan
+## Remove the Active Cooling Fan
 
 There is a design flaw in the Raspberry Pi Compute Module 5 case which prevents using both the active cooling fan and the passive cooler at the same time. To ensure reliable cooling performance, we recommend removing the active cooling fan entirely and using only the passive cooler.
 
@@ -62,11 +62,11 @@ To remove the fan, simply unplug the fan's power cable from the IO board and uns
 
 ![Remove fan](../../../assets/assemble-player/7.jpeg)
 
-## Flash the operating system
+## Flash the Operating System
 
 <Steps>
 
-    1. To flash the operating system onto your compute module you first need to add a jumper to the `eMMC_BOOT_DISABLE` header on the IO board. This will allow the compute module to boot from USB.
+    1. To flash the operating system onto your compute module you first need to add a jumper to the `eMMC_BOOT_DISABLE` header on the IO Board. This allows the Compute Module to boot from USB.
 
        ![Add jumper](../../../assets/assemble-player/8.png)
 
@@ -85,7 +85,7 @@ To remove the fan, simply unplug the fan's power cable from the IO board and uns
 
                        ```rpiboot -d mass-storage-gadget64```
 
-                    4. When the command finishes running, you should see a message stating "The disk you inserted was not readable by this computer." Click Ignore. Your Compute Module should now appear as a mass storage device.
+                    4. When the command finishes running, you should see a message stating "The disk you inserted was not readable by this computer." Click Ignore. your Compute Module should now appear as a mass storage device.
 
             </TabItem>
             <TabItem label="Windows">
@@ -126,26 +126,26 @@ To remove the fan, simply unplug the fan's power cable from the IO board and uns
 
        [Source: Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/computers/compute-module.html#set-up-the-host-device)
     
-    3. Flash the Kaptive OS image onto the compute module using [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
+    3. Flash the Kaptive OS image onto the Compute Module using [Raspberry Pi Imager](https://www.raspberrypi.com/software/).
 
         1. Select the device: Raspberry Pi 5
            ![Select device](../../../assets/assemble-player/rpi-1.png)
-        2. Select the OS: You can find the Kaptive player image under `Freemium and paid-for OS` > `Digital Signage OS` > `Kaptive player`
+        2. Select the OS: You can find the Kaptive Player image under `Freemium and paid-for OS` > `Digital Signage OS` > `Kaptive Player`
            ![Select OS](../../../assets/assemble-player/rpi-2.png)
-        3. Select the compute module as the storage device
+        3. Select the Compute Module as the storage device
         4. (Optional) Customize the OS settings
            <Aside type="danger">The username cannot be changed and should always be `kaptive`.</Aside>
-        5. Click `Write` to flash the OS onto the compute module.
+        5. Click `Write` to flash the OS onto the Compute Module.
 
     4. Once the flashing process is complete, remove the jumper from the `eMMC_BOOT_DISABLE` header.
-       <Aside> Leaving the jumper on will prevent the compute module from booting to the Kaptive OS</Aside>
+       <Aside> Leaving the jumper on prevents the Compute Module from booting to the Kaptive OS</Aside>
 </Steps>
 
-## Final assembly and first boot
+## Final Assembly and First Boot
 
-Once the OS is flashed, you can reassemble the case by screwing the IO board back into the case and screwing the case back together.
+Once the OS is flashed, you can reassemble the case by screwing the IO Board back into the case and screwing the case back together.
 
-Connect the power supply to the player and power it on. The player should boot into the Kaptive OS and be ready for use.
+Connect the power supply to the Player and power it on. The Player should boot into the Kaptive OS and be ready for use.
 
 <Aside> On first boot, the player may take a few minutes to complete initial setup tasks. Please be patient during this process. </Aside>
 

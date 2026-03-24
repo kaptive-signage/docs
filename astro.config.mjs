@@ -8,11 +8,10 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   integrations: [
     starlight({
-      
       title: {
-        en: "kaptive docs",
-        fr: "kaptive docs",
-        de: "kaptive docs",
+        en: "Kaptive Docs",
+        fr: "Kaptive Docs",
+        de: "Kaptive Docs",
       },
       customCss: ["./src/styles/global.css"],
       logo: {
@@ -43,7 +42,7 @@ export default defineConfig({
       editLink: {
         baseUrl: "https://github.com/kaptive-signage/docs/edit/main/",
       },
-      components:{
+      components: {
         Pagination: "./src/components/Pagination.astro",
         ContentPanel: "./src/components/ContentPanel.astro",
         PageTitle: "./src/components/PageTitle.astro",
@@ -57,10 +56,10 @@ export default defineConfig({
           },
           items: [
             {
-              label: "Account & Licence",
+              label: "Account & Licences",
               translations: {
-                fr: "Compte & Licence",
-                de: "Konto & Lizenz",
+                fr: "Compte & Licences",
+                de: "Konto & Lizenzen",
               },
               slug: "getting-started/account-and-licence",
             },
@@ -97,12 +96,20 @@ export default defineConfig({
               slug: "getting-started/add-interactivity",
             },
             {
-              label: "Publish",
+              label: "Assign your Project",
               translations: {
-                fr: "Publier",
-                de: "Veröffentlichen",
+                fr: "Assigner votre Projet",
+                de: "Projekt zuweisen",
               },
-              slug: "getting-started/publish",
+              slug: "getting-started/assign",
+            },
+            {
+              label: "Schedule your Project",
+              translations: {
+                fr: "Planifier votre Projet",
+                de: "Projekt planen",
+              },
+              slug: "getting-started/schedule",
             },
           ],
         },
@@ -113,13 +120,51 @@ export default defineConfig({
             de: "Anleitungen",
           },
           items: [
+            // {
+            //   label: "Assemble your own player",
+            //   translations: {
+            //     fr: "Assembler votre propre Player",
+            //     de: "Eigenen Player zusammenbauen",
+            //   },
+            //   slug: "guides/assemble-player",
+            // },
             {
-              label: "Assemble your own player",
+              label: "Players",
               translations: {
-                fr: "Assembler votre propre player",
-                de: "Eigenen Player zusammenbauen",
+                fr: "Players",
+                de: "Players",
               },
-              slug: "guides/assemble-player",
+              items: [
+                {
+                  label: "Kaptive Player",
+                  slug: "guides/players/kaptive-player",
+                },
+                {
+                  label: "Kaptive Web",
+                  slug: "guides/players/kaptive-web",
+                },
+                {
+                  label: "Kaptive iOS",
+                  slug: "guides/players/kaptive-ios",
+                },
+              ],
+            },
+            {
+              label: "General",
+              translations: {
+                fr: "Général",
+                de: "Allgemein",
+              },
+              items: [
+                {
+                  label: "Find your Workspace ID",
+                  translations: {
+                    fr: "Trouver l'identifiant de votre Workspace",
+                    de: "Workspace-ID finden",
+                  },
+                  slug: "guides/general/find-workspace-id",
+                },
+              ],
             },
             // {
             //   label: "Alerts",
@@ -127,7 +172,57 @@ export default defineConfig({
             //     fr: "Alertes",
             //     de: "Warnungen",
             //   },
-            //   slug: "guides/alerts",
+            //   items: [
+            //     {
+            //       label: "Create an Alert",
+            //       translations: {
+            //         fr: "Créer une Alerte",
+            //         de: "Eine Warnung erstellen",
+            //       },
+            //       slug: "guides/alerts/create-an-alert",
+            //     },
+            //     // {
+            //     //   label: "Connect the Alert to your Building Alarm",
+            //     //   translations: {
+            //     //     fr: "Connecter l'Alerte à votre alarme de bâtiment",
+            //     //     de: "Warnung mit Gebäudealarm verbinden",
+            //     //   },
+            //     //   slug: "guides/alerts/connect-alert-to-building-alarm",
+            //     // },
+            //   ],
+            // },
+            // {
+            //   label: "Content Creation",
+            //   translations: {
+            //     fr: "Création de Contenu",
+            //     de: "Inhaltserstellung",
+            //   },
+            //   items: [
+            //     {
+            //       label: "Simple Digital Signage",
+            //       translations: {
+            //         fr: "Affichage dynamique simple",
+            //         de: "Einfaches Digital Signage",
+            //       },
+            //       slug: "guides/content-creation/simple-digital-signage",
+            //     },
+            //     {
+            //       label: "Interactive Digital Signage",
+            //       translations: {
+            //         fr: "Affichage dynamique interactif",
+            //         de: "Interaktives Digital Signage",
+            //       },
+            //       slug: "guides/content-creation/interactive-digital-signage",
+            //     },
+            //     {
+            //       label: "iPad Application Creation",
+            //       translations: {
+            //         fr: "Création d'application iPad",
+            //         de: "iPad-Anwendung erstellen",
+            //       },
+            //       slug: "guides/content-creation/ipad-application-creation",
+            //     },
+            //   ],
             // },
           ],
         },

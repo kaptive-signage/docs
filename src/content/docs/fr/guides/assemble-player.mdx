@@ -1,6 +1,6 @@
 ---
-title: Assembler votre propre player
-description: Apprenez à assembler votre propre matériel de player Kaptive.
+title: Assembler votre propre Player
+description: Apprenez à assembler votre propre matériel de Player Kaptive.
 ---
 
 import { Steps } from '@astrojs/starlight/components';
@@ -9,9 +9,9 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 
 
 
-# Matériel
+## Matériel
 
-Pour assembler votre propre player Kaptive, nous recommandons d'utiliser un kit de développement Compute Module 5 de Raspberry Pi. Le kit comprend tout ce dont vous avez besoin pour commencer :
+Pour assembler votre propre Kaptive Player, nous recommandons d'utiliser un kit de développement Compute Module 5 de Raspberry Pi. Le kit comprend tout ce dont vous avez besoin pour commencer :
 
 ![Kit de développement Raspberry Pi Compute Module 5](../../../../assets/assemble-player/1.jpeg)
 
@@ -130,11 +130,11 @@ Pour retirer le ventilateur, débranchez simplement le câble d'alimentation du 
 
         1. Sélectionnez l’appareil : Raspberry Pi 5
            ![Sélectionner l’appareil](../../../../assets/assemble-player/rpi-1.png)
-        2. Sélectionnez l’OS : Vous trouverez l’image du player Kaptive sous `Freemium and paid-for OS` > `Digital Signage OS` > `Kaptive player`
+        2. Sélectionnez l'OS : Vous trouverez l'image du Kaptive Player sous `Freemium and paid-for OS` > `Digital Signage OS` > `Kaptive Player`
            ![Sélectionner l’OS](../../../../assets/assemble-player/rpi-2.png)
         3. Sélectionnez le Compute Module comme périphérique de stockage.
         4. (Facultatif) Personnalisez les paramètres de l’OS.
-           <Aside type="danger">Le nom d’utilisateur ne peut pas être modifié et doit toujours être `Kaptive`.</Aside>
+           <Aside type="danger">Le nom d'utilisateur ne peut pas être modifié et doit toujours être `kaptive`.</Aside>
         5. Cliquez sur `Write` pour flasher l’OS sur le Compute Module.
 
     4. Une fois le processus de flash terminé, retirez le jumper de l’en-tête `eMMC_BOOT_DISABLE`.
@@ -145,6 +145,6 @@ Pour retirer le ventilateur, débranchez simplement le câble d'alimentation du 
 
 Une fois l’OS flashé, vous pouvez remonter le boîtier en revissant la carte IO dans le boîtier, puis en refermant le boîtier.
 
-Branchez l’alimentation au player et mettez-le sous tension. Le player doit démarrer sur Kaptive OS et être prêt à l’emploi.
+Branchez l'alimentation au Player et mettez-le sous tension. Le Player doit démarrer sur Kaptive OS et être prêt à l'emploi.
 
-<Aside> Au premier démarrage, le player peut prendre quelques minutes pour terminer les tâches d’initialisation. Merci de patienter durant ce processus. </Aside>
+<Aside> Au premier démarrage, le Player peut prendre quelques minutes pour terminer les tâches d'initialisation. Merci de patienter durant ce processus. </Aside>
