@@ -89,6 +89,20 @@
 
 }
 
+.hero > img,
+.hero > .hero-html {
+  width: min(80%, 25rem);
+  height: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 50rem) {
+  .hero > img,
+  .hero > .hero-html {
+    width: min(100%, 20rem);
+  }
+}
+
 @theme {
   --color-accent-200: var(--primary);
   --color-accent-500: var(--primary);
