@@ -13,12 +13,6 @@ export default defineConfig({
         fr: "Kaptive Docs",
         de: "Kaptive Docs",
       },
-      head: [
-        {
-          tag: "meta",
-          attrs: { name: "google", content: "notranslate" },
-        },
-      ],
       customCss: ["./src/styles/global.css"],
       logo: {
         src: "./src/assets/kaptive-orange.svg",
@@ -32,9 +26,11 @@ export default defineConfig({
         },
         fr: {
           label: "Français",
+          lang: "fr",
         },
         de: {
           label: "Deutsch",
+          lang: "de",
         },
       },
       social: [
