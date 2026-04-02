@@ -12,6 +12,7 @@ export default defineConfig({
         en: "Kaptive Docs",
         fr: "Kaptive Docs",
         de: "Kaptive Docs",
+        it: "Kaptive Docs",
       },
       customCss: ["./src/styles/global.css"],
       logo: {
@@ -31,6 +32,9 @@ export default defineConfig({
         de: {
           label: "Deutsch",
           lang: "de",
+        },
+        it: {
+          label: "Italiano",
         },
       },
       social: [
@@ -55,13 +59,24 @@ export default defineConfig({
           translations: {
             fr: "Premiers pas",
             de: "Erste Schritte",
+            it: "Per Iniziare",
           },
           items: [
+            {
+              label: "Introduction",
+              translations: {
+                fr: "Introduction",
+                de: "Einführung",
+                it: "Introduzione",
+              },
+              slug: "getting-started/introduction",
+            },
             {
               label: "Account & Licences",
               translations: {
                 fr: "Compte & Licences",
                 de: "Konto & Lizenzen",
+                it: "Account e Licenze",
               },
               slug: "getting-started/account-and-licence",
             },
@@ -70,6 +85,7 @@ export default defineConfig({
               translations: {
                 fr: "Connecter un Player",
                 de: "Player verbinden",
+                it: "Collegare un Player",
               },
               slug: "getting-started/connect-player",
             },
@@ -78,6 +94,7 @@ export default defineConfig({
               translations: {
                 fr: "Créer un Projet",
                 de: "Projekt erstellen",
+                it: "Creare un Progetto",
               },
               slug: "getting-started/create-project",
             },
@@ -86,6 +103,7 @@ export default defineConfig({
               translations: {
                 fr: "Personnaliser le Style de la Page",
                 de: "Seitenstil anpassen",
+                it: "Personalizzare lo Stile della Pagina",
               },
               slug: "getting-started/customize-page-style",
             },
@@ -94,6 +112,7 @@ export default defineConfig({
               translations: {
                 fr: "Ajouter de l'Interactivité",
                 de: "Interaktivität hinzufügen",
+                it: "Aggiungere Interattività",
               },
               slug: "getting-started/add-interactivity",
             },
@@ -102,6 +121,7 @@ export default defineConfig({
               translations: {
                 fr: "Assigner votre Projet",
                 de: "Projekt zuweisen",
+                it: "Assegnare il tuo Progetto",
               },
               slug: "getting-started/assign",
             },
@@ -110,6 +130,7 @@ export default defineConfig({
               translations: {
                 fr: "Planifier votre Projet",
                 de: "Projekt planen",
+                it: "Pianificare il tuo Progetto",
               },
               slug: "getting-started/schedule",
             },
@@ -120,6 +141,7 @@ export default defineConfig({
           translations: {
             fr: "Guides",
             de: "Anleitungen",
+            it: "Guide",
           },
           items: [
             // {
@@ -135,6 +157,7 @@ export default defineConfig({
               translations: {
                 fr: "Players",
                 de: "Players",
+                it: "Players",
               },
               items: [
                 {
@@ -156,6 +179,7 @@ export default defineConfig({
               translations: {
                 fr: "Général",
                 de: "Allgemein",
+                it: "Generale",
               },
               items: [
                 {
@@ -163,6 +187,7 @@ export default defineConfig({
                   translations: {
                     fr: "Trouver l'identifiant de votre Workspace",
                     de: "Workspace-ID finden",
+                    it: "Trova il tuo Workspace ID",
                   },
                   slug: "guides/general/find-workspace-id",
                 },
@@ -231,6 +256,13 @@ export default defineConfig({
       ],
     }),
   ],
+
+  redirects: {
+    "/": "/getting-started/introduction",
+    "/fr/": "/fr/getting-started/introduction",
+    "/de/": "/de/getting-started/introduction",
+    "/it/": "/it/getting-started/introduction",
+  },
 
   vite: {
     plugins: [tailwindcss()],

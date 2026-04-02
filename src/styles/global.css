@@ -73,17 +73,15 @@
   --sl-badge-default-bg: var(--primary);
   --sl-badge-default-border: var(--primary);
   --sl-badge-default-text: var(--primary-foreground);
-  --sl-content-pad-x: 3.5rem;
+  --sl-content-width: 55rem;
+  --sl-content-margin-inline: 0;
+  --sl-content-pad-x: 2rem;
 
   --sl-text-h1: 2rem;
   --sl-text-h2: 1.5rem;
   --sl-text-h3: 1.25rem;
   --sl-text-h4: 1.125rem;
   --sl-text-h5: 1rem;
-}
-
-html:not([data-has-sidebar]) {
-  --sl-content-width: 70.5rem !important;
 }
 
 @theme {
