@@ -69,7 +69,7 @@ export default defineConfig({
                 de: "Einführung",
                 it: "Introduzione",
               },
-              slug: "getting-started/introduction",
+              slug: "index",
             },
             {
               label: "Account & Licences",
@@ -144,14 +144,6 @@ export default defineConfig({
             it: "Guide",
           },
           items: [
-            // {
-            //   label: "Assemble your own player",
-            //   translations: {
-            //     fr: "Assembler votre propre Player",
-            //     de: "Eigenen Player zusammenbauen",
-            //   },
-            //   slug: "guides/assemble-player",
-            // },
             {
               label: "Players",
               translations: {
@@ -193,76 +185,11 @@ export default defineConfig({
                 },
               ],
             },
-            // {
-            //   label: "Alerts",
-            //   translations: {
-            //     fr: "Alertes",
-            //     de: "Warnungen",
-            //   },
-            //   items: [
-            //     {
-            //       label: "Create an Alert",
-            //       translations: {
-            //         fr: "Créer une Alerte",
-            //         de: "Eine Warnung erstellen",
-            //       },
-            //       slug: "guides/alerts/create-an-alert",
-            //     },
-            //     // {
-            //     //   label: "Connect the Alert to your Building Alarm",
-            //     //   translations: {
-            //     //     fr: "Connecter l'Alerte à votre alarme de bâtiment",
-            //     //     de: "Warnung mit Gebäudealarm verbinden",
-            //     //   },
-            //     //   slug: "guides/alerts/connect-alert-to-building-alarm",
-            //     // },
-            //   ],
-            // },
-            // {
-            //   label: "Content Creation",
-            //   translations: {
-            //     fr: "Création de Contenu",
-            //     de: "Inhaltserstellung",
-            //   },
-            //   items: [
-            //     {
-            //       label: "Simple Digital Signage",
-            //       translations: {
-            //         fr: "Affichage dynamique simple",
-            //         de: "Einfaches Digital Signage",
-            //       },
-            //       slug: "guides/content-creation/simple-digital-signage",
-            //     },
-            //     {
-            //       label: "Interactive Digital Signage",
-            //       translations: {
-            //         fr: "Affichage dynamique interactif",
-            //         de: "Interaktives Digital Signage",
-            //       },
-            //       slug: "guides/content-creation/interactive-digital-signage",
-            //     },
-            //     {
-            //       label: "iPad Application Creation",
-            //       translations: {
-            //         fr: "Création d'application iPad",
-            //         de: "iPad-Anwendung erstellen",
-            //       },
-            //       slug: "guides/content-creation/ipad-application-creation",
-            //     },
-            //   ],
-            // },
           ],
         },
       ],
     }),
   ],
-
-  redirects: {
-    "/": "/getting-started/introduction",
-    "/fr/": "/fr/getting-started/introduction",
-    "/de/": "/de/getting-started/introduction",
-    "/it/": "/it/getting-started/introduction",
-  },
 
   vite: {
     plugins: [tailwindcss()],

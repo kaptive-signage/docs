@@ -73,9 +73,7 @@
   --sl-badge-default-bg: var(--primary);
   --sl-badge-default-border: var(--primary);
   --sl-badge-default-text: var(--primary-foreground);
-  --sl-content-width: 55rem;
-  --sl-content-margin-inline: 0;
-  --sl-content-pad-x: 2rem;
+  --sl-content-pad-x: 3.5rem;
 
   --sl-text-h1: 2rem;
   --sl-text-h2: 1.5rem;
