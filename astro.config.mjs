@@ -185,6 +185,44 @@ export default defineConfig({
                 },
               ],
             },
+            {
+              label: "Alerts",
+              translations: {
+                fr: "Alertes",
+                de: "Alarme",
+                it: "Alerte",
+              },
+              items: [
+                {
+                  label: "Create an Alert",
+                  translations: {
+                    fr: "Créer une Alerte",
+                    de: "Alarm erstellen",
+                    it: "Creare un'Alerte",
+                  },
+                  slug: "guides/alerts/create-an-alert",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          label: "Onboarding",
+          translations: {
+            fr: "Guide d'initiation",
+            de: "Einstieg",
+            it: "Guida all'avvio",
+          },
+          items: [
+            {
+              label: "Onboarding Guide",
+              translations: {
+                fr: "Guide d'initiation",
+                de: "Onboarding-Leitfaden",
+                it: "Guida all'avvio",
+              },
+              slug: "onboarding",
+            },
           ],
         },
       ],

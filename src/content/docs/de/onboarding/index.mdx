@@ -1,0 +1,151 @@
+---
+title: Onboarding-Leitfaden
+description: Eine Schritt-für-Schritt-Anleitung für den Einstieg in Kaptive. Behandelt die Kontoerstellung, die Verbindung eines Players, die Erstellung Ihres ersten Projekts und die Veröffentlichung von Inhalt auf Ihren Bildschirmen.
+---
+
+import { Steps, Aside } from '@astrojs/starlight/components';
+
+Dieser Leitfaden führt Sie durch die wesentlichen Schritte, um Kaptive in Betrieb zu nehmen. Befolgen Sie die Schritte der Reihe nach. Jeder Schritt baut auf dem vorherigen auf. Links zur vollständigen Dokumentation finden Sie am Ende jedes Abschnitts.
+
+---
+
+## Schritt 1: Konto erstellen
+
+Um Kaptive zu nutzen, benötigen Sie einen Kaptive Account. Gehen Sie zu [https://kaptive.app](https://kaptive.app) und klicken Sie auf `Sign up`. Sie können sich mit einer E-Mail-Adresse registrieren oder Google bzw. GitHub für eine schnellere Anmeldung verwenden.
+
+Nach der Registrierung werden Sie aufgefordert, einen Workspace zu erstellen: den gemeinsamen Bereich, in dem Sie alle Ihre Projekte und Players verwalten.
+
+Kaptive bietet einen kostenlosen Plan sowie kostenpflichtige Lizenzen mit erweiterten Funktionen. Weitere Informationen finden Sie unter [https://kaptive.ch/features](https://kaptive.ch/features), oder [kontaktieren Sie uns](mailto:info@kaptive.ch).
+
+Weitere Details: [Konto & Lizenzen](../getting-started/account-and-licence)
+
+---
+
+## Schritt 2: Player verbinden
+
+Ein Kaptive Player ist das Gerät, das Ihren Inhalt anzeigt. Es gibt zwei Optionen:
+
+- Kaptive Player: ein dediziertes Hardware-Gerät. Empfohlen für kommerzielle Einsätze.
+- Kaptive Web: läuft in jedem Browser unter [https://player.kaptive.app](https://player.kaptive.app). Geeignet für Tests und kleinere Anwendungen.
+
+Wenn ein Kaptive Player oder Kaptive Web zum ersten Mal startet, wird ein Kopplungscode angezeigt. So verbinden Sie ihn mit Ihrem Konto:
+
+<Steps>
+1. Scannen Sie den QR-Code oder gehen Sie zu [https://kaptive.app/verify](https://kaptive.app/verify) und geben Sie den Code manuell ein.
+2. Geben Sie dem Player einen Namen, um ihn in Ihrem Konto zu identifizieren.
+3. Wählen Sie den Workspace aus, dem er hinzugefügt werden soll.
+4. Klicken Sie auf `Verify Device`.
+</Steps>
+
+Nach der Verbindung erscheint der Player in Ihrem Kaptive Manager unter dem ausgewählten Workspace.
+
+Weitere Details: [Player verbinden](../getting-started/connect-player)
+
+---
+
+## Schritt 3: Projekt erstellen
+
+Ein Projekt ist der Container für Ihren digitalen Signage-Inhalt. Es kann eine oder mehrere Pages haben. Jede Page füllt den gesamten Bildschirm bei der Wiedergabe.
+
+<Steps>
+1. Gehen Sie im Kaptive Manager zum Bereich Projects und klicken Sie auf `Start new Project`.
+2. Geben Sie einen Namen ein und wählen Sie eine Auflösung, die Ihrem Bildschirm entspricht.
+3. Klicken Sie auf `Create`.
+</Steps>
+
+Dies öffnet den Kaptive Editor: eine Drag-and-Drop-Oberfläche, die in vier Bereiche unterteilt ist:
+
+1. Obere Werkzeugleiste: Projekteinstellungen, Veröffentlichungssteuerung und Werkzeuge zum Hinzufügen von Content Elements.
+2. Linke Seitenleiste: die Liste der Pages in Ihrem Projekt.
+3. Rechte Seitenleiste: Eigenschaften des ausgewählten Content Elements.
+4. Canvas: der Bereich, in dem Sie Ihre Pages gestalten, indem Sie Content Elements platzieren und anordnen.
+
+Fügen Sie Bilder, Videos, Texte und andere Content Elements hinzu, indem Sie sie von der Werkzeugleiste auf die Canvas ziehen.
+
+Weitere Details: [Projekt erstellen](../getting-started/create-project)
+
+---
+
+## Schritt 4: Project Page Style anpassen
+
+Jede Page hat einen Project Page Style, der ihr Standardaussehen festlegt: Hintergrundfarbe, Schriftarten und andere visuelle Voreinstellungen. Sie können für jede Page einen anderen Project Page Style konfigurieren.
+
+Öffnen Sie das Project Page Style-Panel im Kaptive Editor, passen Sie die Einstellungen an Ihr Branding an, und klicken Sie auf `Save`, um sie anzuwenden.
+
+Weitere Details: [Seitenstil anpassen](../getting-started/customize-page-style)
+
+---
+
+## Schritt 5: Interaktivität hinzufügen
+
+<Aside type="note">Dieser Schritt ist optional. Überspringen Sie ihn, wenn Ihr Bildschirm nicht touchfähig ist oder wenn Sie nur statischen Inhalt benötigen.</Aside>
+
+Der Kaptive Editor unterstützt vollständig touchfähige Oberflächen. Sie können Schaltflächen hinzufügen, die Pages verbinden, um interaktive Kioske, Orientierungsbildschirme oder Bestellbildschirme ohne jeglichen Code zu erstellen.
+
+Fügen Sie in der Werkzeugleiste ein Schaltflächen-Content Element hinzu, und konfigurieren Sie dann in seinen Eigenschaften, welche Page es verlinkt. Fügen Sie auf Detail-Pages Zurück-Schaltflächen hinzu, damit Benutzer zur Haupt-Page zurücknavigieren können.
+
+Sie können Schaltflächenhintergründe transparent machen oder Bilder hinzufügen, um anklickbare Karten, Pläne oder Listen zu erstellen.
+
+Weitere Details: [Interaktivität hinzufügen](../getting-started/add-interactivity)
+
+---
+
+## Schritt 6: Projekt einem Player zuweisen
+
+Das Zuweisen eines Projekts an einen Player macht es zum standardmäßig angezeigten Inhalt auf diesem Player.
+
+<Steps>
+1. Klicken Sie im Kaptive Editor auf `Assign` in der oberen rechten Ecke.
+2. Wählen Sie einen oder mehrere Players aus.
+3. Klicken Sie auf `Assign`.
+</Steps>
+
+Ihr Inhalt wird sofort auf den ausgewählten Players abgespielt. Sie können dasselbe Projekt mehreren Players zuweisen.
+
+Nachdem Sie ein bereits zugewiesenes Projekt bearbeitet haben, klicken Sie auf die orangefarbene Schaltfläche `Publish`, um die aktualisierte Version an alle zugewiesenen Players zu senden.
+
+<Aside type="tip">Assign vs. Publish: Verwenden Sie `Assign`, wenn Sie ein Projekt zum ersten Mal mit einem Player verbinden. Verwenden Sie `Publish`, um Aktualisierungen nach der Bearbeitung eines bereits zugewiesenen Projekts zu senden.</Aside>
+
+Weitere Details: [Projekt zuweisen](../getting-started/assign)
+
+---
+
+## Schritt 7: Inhalt planen
+
+<Aside type="note">Dieser Schritt ist optional. Planung ist nützlich, wenn Sie zu verschiedenen Tages- oder Wochenzeiten unterschiedliche Projekte anzeigen möchten.</Aside>
+
+Ein Schedule ist eine zeitbasierte Rotation mehrerer Projekte. Wenn ein Schedule einem Player zugewiesen ist, wird jedes Projekt während seines konfigurierten Zeitraums abgespielt. Wenn kein geplantes Projekt aktiv ist, fällt der Player auf sein standardmäßig zugewiesenes Projekt zurück.
+
+<Steps>
+1. Erstellen Sie einen Schedule und fügen Sie Projekte mit einem konfigurierten Zeitraum hinzu.
+2. Klicken Sie auf `Assign` im Schedule-Editor, um ihn einem oder mehreren Players zuzuweisen.
+3. Klicken Sie nach Änderungen an einem Schedule auf die orangefarbene Schaltfläche `Publish`, um die Aktualisierungen anzuwenden.
+</Steps>
+
+Weitere Details: [Projekt planen](../getting-started/schedule)
+
+---
+
+## Kurzübersicht
+
+| Schritt | Aktion | Weitere Informationen |
+|---------|--------|-----------------------|
+| 1 | Kaptive Account erstellen unter [https://kaptive.app](https://kaptive.app) | [Konto & Lizenzen](../getting-started/account-and-licence) |
+| 2 | Kaptive Player verbinden oder Kaptive Web öffnen | [Player verbinden](../getting-started/connect-player) |
+| 3 | Projekt erstellen und Pages im Kaptive Editor gestalten | [Projekt erstellen](../getting-started/create-project) |
+| 4 | Project Page Style festlegen | [Seitenstil anpassen](../getting-started/customize-page-style) |
+| 5 | Schaltflächen und Interaktivität hinzufügen _(optional)_ | [Interaktivität hinzufügen](../getting-started/add-interactivity) |
+| 6 | Projekt einem Player zuweisen | [Projekt zuweisen](../getting-started/assign) |
+| 7 | Schedule für zeitgesteuerten Inhalt erstellen _(optional)_ | [Projekt planen](../getting-started/schedule) |
+
+---
+
+## Wichtige URLs
+
+| Dienst | URL |
+|--------|-----|
+| Kaptive Manager | https://kaptive.app |
+| Kaptive Web | https://player.kaptive.app |
+| Gerät verbinden | https://kaptive.app/verify |
+| Funktionen & Preise | https://kaptive.ch/features |
+| Kontakt | info@kaptive.ch |

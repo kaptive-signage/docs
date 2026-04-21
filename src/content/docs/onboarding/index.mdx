@@ -1,0 +1,151 @@
+---
+title: Onboarding Guide
+description: A step-by-step guide to get started with Kaptive. Covers account creation, connecting a Player, building your first Project, and publishing content to your screens.
+---
+
+import { Steps, Aside } from '@astrojs/starlight/components';
+
+This guide walks you through the essential steps to get Kaptive up and running. Follow the steps in order. Each one builds on the previous. Links to the full documentation are provided at the end of each section.
+
+---
+
+## Step 1: Create Your Account
+
+To use Kaptive, you need a Kaptive Account. Go to [https://kaptive.app](https://kaptive.app) and click `Sign up`. You can register with an email address or use Google or GitHub for a quicker sign-up.
+
+After signing up, you will be prompted to create a Workspace: the shared space where you manage all your Projects and Players.
+
+Kaptive offers a free plan as well as paid Licences with advanced features. See [https://kaptive.ch/features](https://kaptive.ch/features) for a full comparison, or [contact us](mailto:info@kaptive.ch).
+
+Full details: [Account & Licences](../getting-started/account-and-licence)
+
+---
+
+## Step 2: Connect a Player
+
+A Kaptive Player is the device that displays your content. There are two options:
+
+- Kaptive Player: a dedicated hardware device. Recommended for commercial deployments.
+- Kaptive Web: runs in any browser at [https://player.kaptive.app](https://player.kaptive.app). Suitable for testing and small-scale use.
+
+When a Kaptive Player or Kaptive Web starts for the first time, it shows a pairing code. To connect it to your account:
+
+<Steps>
+1. Scan the QR code or go to [https://kaptive.app/verify](https://kaptive.app/verify) and enter the code manually.
+2. Give the Player a name to identify it in your account.
+3. Select the Workspace to add it to.
+4. Click `Verify Device`.
+</Steps>
+
+Once connected, the Player appears in your Kaptive Manager under the selected Workspace.
+
+Full details: [Connect a Player](../getting-started/connect-player)
+
+---
+
+## Step 3: Create a Project
+
+A Project is the container for your digital signage Content. It can have one or more Pages. Each Page fills the entire screen when published.
+
+<Steps>
+1. In Kaptive Manager, go to the Projects section and click `Start new Project`.
+2. Enter a name and choose a resolution that matches your screen.
+3. Click `Create`.
+</Steps>
+
+This opens the Kaptive Editor: a drag-and-drop interface divided into four areas:
+
+1. Top toolbar: Project settings, Publishing controls, and tools for adding Content Elements.
+2. Left sidebar: the list of Pages in your Project.
+3. Right sidebar: properties for the selected Content Element.
+4. Canvas: where you design your Pages by placing and arranging Content Elements.
+
+Add images, videos, text, and other Content Elements by dragging them from the toolbar onto the canvas.
+
+Full details: [Create a Project](../getting-started/create-project)
+
+---
+
+## Step 4: Customize Your Project Page Style
+
+Each Page has a Project Page Style that sets its default appearance: background color, fonts, and other visual defaults. You can configure a different Project Page Style for each Page.
+
+Open the Project Page Style panel in the Kaptive Editor, adjust the settings to match your branding, and click `Save` to apply.
+
+Full details: [Customize Page Style](../getting-started/customize-page-style)
+
+---
+
+## Step 5: Add Interactivity
+
+<Aside type="note">This step is optional. Skip it if your screen is not touch-enabled or if you only need static content.</Aside>
+
+The Kaptive Editor supports fully touch-native interfaces. You can add buttons that link between Pages to build interactive kiosks, orientation screens, or order screens without any coding.
+
+In the toolbar, add a button Content Element, then configure which Page it links to in its properties. Add back buttons on detail Pages so users can navigate back to the main Page.
+
+You can make button backgrounds transparent or add images to create clickable maps, plans, or lists.
+
+Full details: [Add Interactivity](../getting-started/add-interactivity)
+
+---
+
+## Step 6: Assign Your Project to a Player
+
+Assigning a Project to a Player makes it the default content displayed on that Player.
+
+<Steps>
+1. In the Kaptive Editor, click `Assign` in the top-right corner.
+2. Select one or more Players.
+3. Click `Assign`.
+</Steps>
+
+Your content starts playing on the selected Players immediately. You can assign the same Project to multiple Players.
+
+After editing a Project that is already assigned, click the orange `Publish` button to push the updated version to all assigned Players.
+
+<Aside type="tip">Assign vs. Publish: Use `Assign` when binding a Project to a Player for the first time. Use `Publish` to send updates after editing an already-assigned Project.</Aside>
+
+Full details: [Assign your Project](../getting-started/assign)
+
+---
+
+## Step 7: Schedule Your Content
+
+<Aside type="note">This step is optional. Scheduling is useful when you need different Projects to appear at different times of day or week.</Aside>
+
+A Schedule is a time-based rotation of multiple Projects. When a Schedule is assigned to a Player, each Project plays during its configured time range. When no scheduled Project is active, the Player falls back to its default assigned Project.
+
+<Steps>
+1. Create a Schedule and add Projects to it, each with a configured time range.
+2. Click `Assign` in the Schedule editor to assign it to one or more Players.
+3. After making changes to a Schedule, click the orange `Publish` button to apply the updates.
+</Steps>
+
+Full details: [Schedule your Project](../getting-started/schedule)
+
+---
+
+## Quick Reference
+
+| Step | What to Do | Where to Learn More |
+|------|-----------|-------------------|
+| 1 | Create your Kaptive Account at [https://kaptive.app](https://kaptive.app) | [Account & Licences](../getting-started/account-and-licence) |
+| 2 | Connect a Kaptive Player or open Kaptive Web | [Connect a Player](../getting-started/connect-player) |
+| 3 | Create a Project and design your Pages in the Kaptive Editor | [Create a Project](../getting-started/create-project) |
+| 4 | Set your Project Page Style | [Customize Page Style](../getting-started/customize-page-style) |
+| 5 | Add buttons and Interactivity _(optional)_ | [Add Interactivity](../getting-started/add-interactivity) |
+| 6 | Assign your Project to a Player | [Assign your Project](../getting-started/assign) |
+| 7 | Create a Schedule for timed content _(optional)_ | [Schedule your Project](../getting-started/schedule) |
+
+---
+
+## Key URLs
+
+| Service | URL |
+|---------|-----|
+| Kaptive Manager | https://kaptive.app |
+| Kaptive Web | https://player.kaptive.app |
+| Connect a Device | https://kaptive.app/verify |
+| Features & Pricing | https://kaptive.ch/features |
+| Contact | info@kaptive.ch |

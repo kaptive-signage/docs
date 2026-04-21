@@ -1,0 +1,70 @@
+---
+title: Alarm erstellen
+description: Erfahren Sie, wie Sie Alarme in Kaptive erstellen, zuweisen und aktivieren, um Inhalt auf Ihren Players sofort zu überschreiben.
+---
+
+import { Steps, Aside } from '@astrojs/starlight/components';
+
+## Was ist eine Alarm?
+
+Eine Alarm ist eine besondere Art von Projekt. Sie verwendet denselben Kaptive Editor, dieselben Content Elements und denselben Zuweisungs- und Veröffentlichungsprozess wie jedes andere Projekt.
+
+Der Unterschied liegt darin, was passiert, wenn Sie sie aktivieren. Wenn eine Alarm aktiviert wird, überschreibt sie sofort alle Inhalte auf den zugewiesenen Players: standardmäßig zugewiesene Projekte und aktive Schedules werden beide ausgesetzt. Die Alarm wird abgespielt, bis Sie sie deaktivieren. Bei der Deaktivierung kehrt jeder Player zu dem Inhalt zurück, den er zuvor angezeigt hat.
+
+Alarmen eignen sich damit für dringende Nachrichten, Sicherheitsdurchsagen oder jede Situation, in der Inhalte sofort auf den Bildschirmen erscheinen müssen, unabhängig von der aktuellen Planung.
+
+---
+
+## Alarm erstellen
+
+<Steps>
+1. Gehen Sie im Kaptive Manager zum Bereich Alarmen und klicken Sie auf `New Alert`.
+2. Geben Sie einen Namen ein und wählen Sie eine Auflösung, die Ihren Bildschirmen entspricht.
+3. Klicken Sie auf `Create`.
+</Steps>
+
+Dies öffnet den Kaptive Editor. Die Oberfläche ist identisch mit dem Projekt-Editor: dieselbe Werkzeugleiste, dieselben linken und rechten Seitenleisten, dieselbe Canvas. Fügen Sie Content Elements hinzu, gestalten Sie Ihre Pages und formatieren Sie sie genau so, wie Sie es bei jedem anderen Projekt tun würden.
+
+<Aside type="tip">Halten Sie den Inhalt der Alarm einfach und sofort lesbar. Großer Text, hoher Kontrast und eine klare Botschaft sind am effektivsten in dringenden Situationen, in denen der Inhalt schnell erfasst werden muss.</Aside>
+
+---
+
+## Alarm Players zuweisen
+
+Das Zuweisen einer Alarm an Players registriert diese Players als Ziele der Alarm. Die Alarm erscheint noch nicht auf dem Bildschirm: Sie wird erst sichtbar, wenn Sie sie aktivieren.
+
+<Steps>
+1. Klicken Sie im Kaptive Editor auf `Assign` in der oberen rechten Ecke.
+2. Wählen Sie die Players aus, die diese Alarm anzeigen sollen, wenn sie aktiviert wird.
+3. Klicken Sie auf `Assign`.
+</Steps>
+
+Sie können dieselbe Alarm so vielen Players wie nötig zuweisen. Players, die einer Alarm nicht zugewiesen sind, werden nicht beeinflusst, wenn diese Alarm aktiviert wird.
+
+---
+
+## Aktualisierungen einer Alarm veröffentlichen
+
+Nachdem Sie eine bereits zugewiesene Alarm bearbeitet haben, klicken Sie auf die orangefarbene Schaltfläche `Publish`, um die aktualisierte Version an alle zugewiesenen Players zu senden. Die Aktualisierung tritt beim nächsten Aktivieren der Alarm in Kraft.
+
+<Aside type="note">Wenn eine Alarm beim Veröffentlichen einer Aktualisierung bereits aktiv ist, zeigen die zugewiesenen Players den aktualisierten Inhalt sofort an.</Aside>
+
+---
+
+## Alarm aktivieren
+
+Das Aktivieren einer Alarm lässt sie gleichzeitig auf allen zugewiesenen Players erscheinen und überschreibt dabei alle aktuell abgespielten Inhalte: egal ob es sich um ein standardmäßig zugewiesenes Projekt oder einen aktiven Schedule handelt.
+
+Um eine Alarm zu aktivieren, klicken Sie auf die Schaltfläche `Activate Alert` im Alarms-Editor oder in der Alarmsübersicht im Kaptive Manager.
+
+Sobald aktiv, wird die Alarm auf allen zugewiesenen Players abgespielt, bis Sie sie deaktivieren. Kein anderer Inhalt wird auf diesen Players abgespielt, solange die Alarm aktiv ist.
+
+---
+
+## Alarm deaktivieren
+
+Wenn die Situation gelöst ist, deaktivieren Sie die Alarm, damit jeder Player zu seinem normalen Inhalt zurückkehrt.
+
+Um eine Alarm zu deaktivieren, klicken Sie auf die Schaltfläche `Deactivate Alert` im Alarms-Editor oder in der Alarmsübersicht im Kaptive Manager.
+
+Jeder zugewiesene Player nimmt sofort den Inhalt wieder auf, den er vor der Aktivierung der Alarm angezeigt hat: sein standardmäßig zugewiesenes Projekt oder das aktuell geplante Projekt aus seinem aktiven Schedule.
