@@ -175,6 +175,15 @@ export default defineConfig({
               },
               items: [
                 {
+                  label: "Roles",
+                  translations: {
+                    fr: "Rôles",
+                    de: "Rollen",
+                    it: "Ruoli",
+                  },
+                  slug: "guides/general/roles",
+                },
+                {
                   label: "Find your Workspace ID",
                   translations: {
                     fr: "Trouver l'identifiant de votre Workspace",
@@ -214,6 +223,15 @@ export default defineConfig({
             it: "Guida all'avvio",
           },
           items: [
+            {
+              label: "Workshop",
+              translations: {
+                fr: "Workshop",
+                de: "Workshop",
+                it: "Workshop",
+              },
+              slug: "onboarding/workshop",
+            },
             {
               label: "Onboarding Guide",
               translations: {
