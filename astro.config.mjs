@@ -195,6 +195,20 @@ export default defineConfig({
               ],
             },
             {
+              label: "Editor",
+              translations: {
+                fr: "Éditeur",
+                de: "Editor",
+                it: "Editor",
+              },
+              items: [
+                {
+                  label: "Hide and Schedule Pages",
+                  slug: "guides/editor/page-scheduling",
+                }
+              ],
+            },
+            {
               label: "Alerts",
               translations: {
                 fr: "Alertes",

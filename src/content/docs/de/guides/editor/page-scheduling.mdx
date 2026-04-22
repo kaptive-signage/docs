@@ -1,0 +1,27 @@
+---
+title: Projektseiten ausblenden und planen
+description: Erfahren Sie, wie Sie einzelne Projektseiten in Kaptive ausblenden oder planen können.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Manchmal möchten Sie eine Seite eines Projekts ausblenden oder so planen, dass sie nur während eines bestimmten Zeitraums angezeigt wird. Diese Anleitung erklärt, wie Sie das in Kaptive tun können.
+
+## Eine Projektseite ausblenden
+
+Wenn eine bestimmte Seite ausgeblendet ist, wird sie auf einem Player nicht angezeigt. Stattdessen wird sie in der Wiedergabeschleife übersprungen, und der Übergang der vorherigen Seite führt direkt zur nächsten nicht ausgeblendeten Seite.
+
+
+<Aside type="note">Wenn Sie eine Schaltfläche haben, die auf eine ausgeblendete Seite verweist, führt die Schaltfläche stattdessen zur nächsten nicht ausgeblendeten Seite.</Aside>
+
+Um eine Projektseite auszublenden, klicken Sie entweder mit der rechten Maustaste auf die Seite im linken Editor-Bereich und wählen Sie `Hide page`, oder wählen Sie die Seite aus und aktivieren Sie den `Hide page`-Schalter im Seiteneigenschaften-Bereich.
+
+![Projektseite ausblenden.](../../../../../assets/guides/editor/hide-page.png)
+
+## Eine Projektseite planen
+
+Wenn eine bestimmte Seite geplant ist, wird sie auf einem Player nur während des geplanten Zeitraums angezeigt. Außerhalb dieses Zeitraums ist die Seite ausgeblendet und wird in der Wiedergabeschleife übersprungen.
+
+Um eine Projektseite zu planen, aktivieren Sie den `Schedule page`-Schalter im Seiteneigenschaften-Bereich. Legen Sie dann das Start- und Enddatum sowie die Uhrzeit fest, zu der die Seite angezeigt werden soll. Nach der Veröffentlichung ist die Seite nur während des geplanten Zeitraums auf dem Player sichtbar.
+
+![Projektseite planen.](../../../../../assets/guides/editor/schedule-page.png)

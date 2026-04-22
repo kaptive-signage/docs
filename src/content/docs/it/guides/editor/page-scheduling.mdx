@@ -1,0 +1,27 @@
+---
+title: Nascondere e pianificare le pagine del progetto
+description: Scopri come nascondere o pianificare singole pagine di progetto in Kaptive.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+A volte potresti voler nascondere una pagina di un progetto o pianificarla in modo che venga mostrata solo durante un periodo di tempo specifico. Questa guida spiega come farlo in Kaptive.
+
+## Nascondere una pagina del progetto
+
+Quando una pagina specifica è nascosta, non viene mostrata su un Player. Viene invece saltata nel ciclo di riproduzione e la transizione della pagina precedente passa direttamente alla successiva pagina non nascosta.
+
+
+<Aside type="note">Se hai un pulsante che rimanda a una pagina nascosta, il pulsante rimanderà invece alla successiva pagina non nascosta.</Aside>
+
+Per nascondere una pagina del progetto, fai clic con il pulsante destro del mouse sulla pagina nel pannello sinistro dell'editor e seleziona `Hide page`, oppure seleziona la pagina e attiva l'interruttore `Hide page` nel pannello delle proprietà della pagina.
+
+![Nascondi pagina del progetto.](../../../../../assets/guides/editor/hide-page.png)
+
+## Pianificare una pagina del progetto
+
+Quando una pagina specifica è pianificata, viene mostrata su un Player solo durante il periodo di tempo pianificato. Al di fuori di questo periodo, la pagina è nascosta e saltata nel ciclo di riproduzione.
+
+Per pianificare una pagina del progetto, attiva l'interruttore `Schedule page` nel pannello delle proprietà della pagina. Poi imposta la data e l'ora di inizio e fine in cui la pagina deve essere mostrata. Una volta pubblicata, la pagina sarà visibile sul Player solo durante il periodo di tempo pianificato.
+
+![Pianifica pagina del progetto.](../../../../../assets/guides/editor/schedule-page.png)
