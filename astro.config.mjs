@@ -1,11 +1,55 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import fs from "node:fs";
 
 import tailwindcss from "@tailwindcss/vite";
 
+// Read every release note from the content directory, sorted newest-first by
+// version. Release note files are named with hyphenated versions, e.g.
+// `0-6-0.mdx`. Adding a new file automatically lists it in the sidebar and
+// updates the `/whats-new` redirect target — no config changes needed.
+const releaseNotesDir = new URL(
+  "./src/content/docs/release-notes/",
+  import.meta.url
+);
+const releaseNotes = fs
+  .readdirSync(releaseNotesDir)
+  .filter((file) => file.endsWith(".mdx"))
+  .map((file) => file.replace(/\.mdx$/, ""))
+  .sort((a, b) => {
+    const va = a.split("-").map(Number);
+    const vb = b.split("-").map(Number);
+    for (let i = 0; i < Math.max(va.length, vb.length); i++) {
+      const diff = (va[i] ?? 0) - (vb[i] ?? 0);
+      if (diff !== 0) return diff;
+    }
+    return 0;
+  })
+  .reverse();
+
+// Sidebar entries for the "Release Notes" group, newest first. Labels are the
+// dotted version (e.g. `0.6.0`) derived from the hyphenated file name.
+const releaseNoteItems = releaseNotes.map((version) => ({
+  label: version.replace(/-/g, "."),
+  slug: `release-notes/${version}`,
+}));
+
+// `/whats-new` always redirects to the latest release note, per locale
+// (root + each localized prefix), e.g. `/it/whats-new` -> `/it/release-notes/0-6-0/`.
+const localePrefixes = ["", "/fr", "/de", "/it"];
+const latestVersion = releaseNotes[0];
+const whatsNewRedirects = Object.fromEntries(
+  localePrefixes.map((prefix) => [
+    `${prefix}/whats-new`,
+    `${prefix}/release-notes/${latestVersion}/`,
+  ])
+);
+
 // https://astro.build/config
 export default defineConfig({
+  site: "https://docs.kaptive.ch",
+  redirects: whatsNewRedirects,
   integrations: [
     starlight({
       title: {
@@ -203,6 +247,69 @@ export default defineConfig({
               },
               items: [
                 {
+                  label: "Zoom project canvas",
+                  translations: {
+                    fr: "Zoomer sur le canvas du projet",
+                    de: "In die Projekt-Arbeitsfläche zoomen",
+                    it: "Zoom sul canvas del progetto",
+                  },
+                  slug: "guides/editor/zoom-project-canvas",
+                },
+                {
+                  label: "Rotate content elements",
+                  translations: {
+                    fr: "Faire pivoter les éléments de contenu",
+                    de: "Inhaltselemente drehen",
+                    it: "Ruotare gli elementi di contenuto",
+                  },
+                  slug: "guides/editor/element-rotation",
+                },
+                {
+                  label: "Auto-rotate PDF pages",
+                  translations: {
+                    fr: "Rotation automatique des pages PDF",
+                    de: "PDF-Seiten automatisch wechseln",
+                    it: "Rotazione automatica delle pagine PDF",
+                  },
+                  slug: "guides/editor/pdf-page-rotation",
+                },
+                {
+                  label: "Start from a template",
+                  translations: {
+                    fr: "Partir d'un modèle",
+                    de: "Mit einer Vorlage starten",
+                    it: "Partire da un template",
+                  },
+                  slug: "guides/editor/templates",
+                },
+                {
+                  label: "Share and embed projects",
+                  translations: {
+                    fr: "Partager et intégrer des projets",
+                    de: "Projekte teilen und einbetten",
+                    it: "Condividere e incorporare i progetti",
+                  },
+                  slug: "guides/editor/public-sharing",
+                },
+                {
+                  label: "Export a project to PDF",
+                  translations: {
+                    fr: "Exporter un projet en PDF",
+                    de: "Ein Projekt als PDF exportieren",
+                    it: "Esportare un progetto in PDF",
+                  },
+                  slug: "guides/editor/pdf-export",
+                },
+                {
+                  label: "Use custom fonts",
+                  translations: {
+                    fr: "Utiliser des polices personnalisées",
+                    de: "Eigene Schriftarten verwenden",
+                    it: "Usare font personalizzati",
+                  },
+                  slug: "guides/editor/custom-fonts",
+                },
+                {
                   label: "Hide and Schedule Pages",
                   slug: "guides/editor/page-scheduling",
                 }
@@ -257,6 +364,15 @@ export default defineConfig({
             },
           ],
         },
+        {
+          label: "Release Notes",
+          translations: {
+            fr: "Notes de version",
+            de: "Versionshinweise",
+            it: "Note di rilascio",
+          },
+          items: releaseNoteItems,
+        }
       ],
     }),
   ],
