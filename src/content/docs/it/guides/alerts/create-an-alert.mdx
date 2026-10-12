@@ -1,70 +1,70 @@
 ---
-title: Creare un'Alerte
-description: Scopri come creare, assegnare e attivare Alerte in Kaptive per sostituire istantaneamente il Contenuto sui tuoi Player.
+title: Creare un avviso
+description: Scopri come creare, assegnare e attivare avvisi in Kaptive per sostituire istantaneamente il contenuto sui tuoi player.
 ---
 
 import { Steps, Aside } from '@astrojs/starlight/components';
 
-## Cos'è un'Alerte?
+## Cos'è un avviso?
 
-Un'Alerte è un tipo speciale di Progetto. Utilizza esattamente lo stesso Kaptive Editor, gli stessi Elementi di Contenuto e lo stesso processo di Assegnazione e Pubblicazione di qualsiasi altro Progetto.
+Un avviso è un tipo speciale di progetto. Utilizza esattamente lo stesso Kaptive Editor, gli stessi elementi di contenuto e lo stesso processo di assegnazione e pubblicazione di qualsiasi altro progetto.
 
-La differenza sta in ciò che accade quando la attivi. Quando un'Alerte viene attivata, sostituisce immediatamente tutto il Contenuto sui suoi Player assegnati: i Progetti assegnati predefiniti e gli Schedule attivi vengono entrambi sospesi. L'Alerte viene riprodotta fino a quando non la disattivi. Alla disattivazione, ogni Player riprende il Contenuto che stava mostrando in precedenza.
+La differenza sta in ciò che accade quando lo attivi. Quando un avviso viene attivato, sostituisce immediatamente tutto il contenuto sui suoi player assegnati: i progetti assegnati predefiniti e le pianificazioni attive vengono entrambi sospesi. L'avviso viene riprodotto fino a quando non lo disattivi. Alla disattivazione, ogni player riprende il contenuto che stava mostrando in precedenza.
 
-Le Alerte sono quindi adatte a messaggi urgenti, annunci di sicurezza, o qualsiasi situazione in cui il Contenuto deve apparire immediatamente sugli schermi, indipendentemente da ciò che è attualmente pianificato.
+Gli avvisi sono quindi adatti a messaggi urgenti, annunci di sicurezza, o qualsiasi situazione in cui il contenuto deve apparire immediatamente sugli schermi, indipendentemente da ciò che è attualmente pianificato.
 
 ---
 
-## Creare un'Alerte
+## Creare un avviso
 
 <Steps>
-1. Nel Kaptive Manager, vai alla sezione Alerte e clicca su `New Alert`.
+1. Nel Kaptive Manager, vai alla sezione avvisi e clicca su `New Alert`.
 2. Inserisci un nome e scegli una risoluzione che corrisponda ai tuoi schermi.
 3. Clicca su `Create`.
 </Steps>
 
-Si apre il Kaptive Editor. L'interfaccia è identica a quella dell'editor dei Progetti: la stessa barra degli strumenti, le stesse barre laterali sinistra e destra, lo stesso canvas. Aggiungi Elementi di Contenuto, progetta le tue Pagine e stilizza tutto esattamente come faresti in qualsiasi Progetto.
+Si apre il Kaptive Editor. L'interfaccia è identica a quella dell'editor dei progetti: la stessa barra degli strumenti, le stesse barre laterali sinistra e destra, la stessa area di disegno. Aggiungi elementi di contenuto, progetta le tue pagine e stilizza tutto esattamente come faresti in qualsiasi progetto.
 
-<Aside type="tip">Mantieni il Contenuto dell'Alerte semplice e immediatamente leggibile. Testo grande, alto contrasto e un messaggio chiaro funzionano meglio nelle situazioni urgenti in cui il messaggio deve essere compreso rapidamente.</Aside>
+<Aside type="tip">Mantieni il contenuto dell'avviso semplice e immediatamente leggibile. Testo grande, alto contrasto e un messaggio chiaro funzionano meglio nelle situazioni urgenti in cui il messaggio deve essere compreso rapidamente.</Aside>
 
 ---
 
-## Assegnare un'Alerte ai Player
+## Assegnare un avviso ai player
 
-Assegnare un'Alerte ai Player registra quei Player come destinatari dell'Alerte. L'Alerte non appare ancora sullo schermo: diventa visibile solo quando la attivi.
+Assegnare un avviso ai player registra quei player come destinatari dell'avviso. L'avviso non appare ancora sullo schermo: diventa visibile solo quando lo attivi.
 
 <Steps>
 1. Nel Kaptive Editor, clicca su `Assign` in alto a destra.
-2. Seleziona i Player che devono mostrare questa Alerte quando viene attivata.
+2. Seleziona i player che devono mostrare questo avviso quando viene attivato.
 3. Clicca su `Assign`.
 </Steps>
 
-Puoi assegnare la stessa Alerte a tutti i Player necessari. I Player non assegnati a un'Alerte non vengono influenzati quando quell'Alerte viene attivata.
+Puoi assegnare lo stesso avviso a tutti i player necessari. I player non assegnati a un avviso non vengono influenzati quando quell'avviso viene attivato.
 
 ---
 
-## Pubblicare aggiornamenti di un'Alerte
+## Pubblicare aggiornamenti di un avviso
 
-Dopo aver modificato un'Alerte già assegnata, clicca il pulsante arancione `Publish` per inviare la versione aggiornata a tutti i Player assegnati. L'aggiornamento entra in vigore alla prossima attivazione dell'Alerte.
+Dopo aver modificato un avviso già assegnato, clicca il pulsante arancione `Publish` per inviare la versione aggiornata a tutti i player assegnati. L'aggiornamento entra in vigore alla prossima attivazione dell'avviso.
 
-<Aside type="note">Se un'Alerte è attualmente attiva quando pubblichi un aggiornamento, i Player assegnati mostreranno immediatamente il Contenuto aggiornato.</Aside>
-
----
-
-## Attivare un'Alerte
-
-Attivare un'Alerte la fa apparire simultaneamente su tutti i suoi Player assegnati, sostituendo qualsiasi Contenuto attualmente in riproduzione: che si tratti di un Progetto assegnato predefinito o di uno Schedule attivo.
-
-Per attivare un'Alerte, clicca il pulsante `Activate Alert` nell'editor dell'Alerte o dalla panoramica delle Alerte nel Kaptive Manager.
-
-Una volta attiva, l'Alerte continua a essere riprodotta su tutti i Player assegnati fino a quando non la disattivi. Nessun altro Contenuto viene riprodotto su quei Player mentre l'Alerte è attiva.
+<Aside type="note">Se un avviso è attualmente attivo quando pubblichi un aggiornamento, i player assegnati mostreranno immediatamente il contenuto aggiornato.</Aside>
 
 ---
 
-## Disattivare un'Alerte
+## Attivare un avviso
 
-Quando la situazione è risolta, disattiva l'Alerte per far riprendere a ogni Player il suo Contenuto normale.
+Attivare un avviso lo fa apparire simultaneamente su tutti i suoi player assegnati, sostituendo qualsiasi contenuto attualmente in riproduzione: che si tratti di un progetto assegnato predefinito o di una pianificazione attiva.
 
-Per disattivare un'Alerte, clicca il pulsante `Deactivate Alert` nell'editor dell'Alerte o dalla panoramica delle Alerte nel Kaptive Manager.
+Per attivare un avviso, clicca il pulsante `Activate Alert` nell'editor dell'avviso o dalla panoramica degli avvisi nel Kaptive Manager.
 
-Ogni Player assegnato riprende immediatamente il Contenuto che stava mostrando prima dell'attivazione dell'Alerte: il suo Progetto assegnato predefinito, o il Progetto attualmente pianificato nel suo Schedule attivo.
+Una volta attivo, l'avviso continua a essere riprodotto su tutti i player assegnati fino a quando non lo disattivi. Nessun altro contenuto viene riprodotto su quei player mentre l'avviso è attivo.
+
+---
+
+## Disattivare un avviso
+
+Quando la situazione è risolta, disattiva l'avviso per far riprendere a ogni player il suo contenuto normale.
+
+Per disattivare un avviso, clicca il pulsante `Deactivate Alert` nell'editor dell'avviso o dalla panoramica degli avvisi nel Kaptive Manager.
+
+Ogni player assegnato riprende immediatamente il contenuto che stava mostrando prima dell'attivazione dell'avviso: il suo progetto assegnato predefinito, o il progetto attualmente pianificato nella sua pianificazione attiva.

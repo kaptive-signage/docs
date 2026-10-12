@@ -1,0 +1,65 @@
+---
+title: Create a playlist
+description: Play several projects back to back on your Kaptive Players with playlists.
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+## How playlists work
+
+A playlist plays several projects one after another. When the last project ends, the playlist starts again from the first one. You show a playlist on your Kaptive Players by adding it to the schedule.
+
+<Aside type="note">Playlists are available when your licence includes them.</Aside>
+
+## Create a playlist
+
+<Steps>
+1. Click `Playlists` in the sidebar.
+2. Click `New playlist`.
+3. Enter a name and click `Create`.
+</Steps>
+
+## Add projects
+
+<Steps>
+1. Open the playlist and click `Add project`.
+2. Search for a project and select it. It is added at the end of the playlist.
+</Steps>
+
+A project can only join a playlist when it is published and every page has a duration. You set a page's duration with its transition in the Kaptive Editor. Projects that can't be added are greyed out with the reason, for example `Not published yet` or `Some pages have no duration`.
+
+You can also add a project to playlists from the Kaptive Editor. Click `Assign`, then `Playlists`. Read more in [Assign your project](/getting-started/assign/).
+
+## Reorder and configure projects
+
+Drag a project by its handle to change the order. Projects play from top to bottom.
+
+Open the menu next to a project for more options:
+
+- `One page per round`: instead of playing all its pages, the project shows its next page each time the playlist loops. This option is available for projects with more than one page.
+- `Remove from playlist`: removes the project from the playlist.
+
+<Aside type="caution">If a published project loses a page duration later, players skip it. The playlist marks it with `Skipped: some pages have no duration`.</Aside>
+
+## Play a playlist on players
+
+<Steps>
+1. Open the schedule and click and drag over a time range in the calendar.
+2. Switch the content type to `Playlist` and select your playlist.
+3. Under `Assign players`, select the players, then click `Add entry`.
+4. Publish the schedule.
+</Steps>
+
+A playlist can't be set as the default project of a player. Read more in [Schedule your project](/getting-started/schedule/).
+
+## Publish and revert changes
+
+Changes to a playlist are a draft until you publish them. Click `Publish` on the playlist page to update the players that play it from the published schedule. Other schedule changes are not published.
+
+To discard your changes, use `Revert` to go back to the published version.
+
+## Rename or delete a playlist
+
+Open the menu of a playlist in the list or on its page and select `Rename` or `Delete playlist`. Deleting a playlist also deletes the schedule entries that play it.
+
+<Aside type="tip">Editors can create and edit playlists. Deleting and publishing playlists requires a manager or admin role. Read more in [Roles](/guides/general/roles/).</Aside>

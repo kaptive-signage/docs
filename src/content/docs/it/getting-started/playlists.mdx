@@ -1,0 +1,65 @@
+---
+title: Creare una playlist
+description: Riproduci più progetti uno dopo l'altro sui tuoi Kaptive Player con le playlist.
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+## Come funzionano le playlist
+
+Una playlist riproduce più progetti uno dopo l'altro. Quando l'ultimo progetto termina, la playlist ricomincia dal primo. Per mostrare una playlist sui tuoi Kaptive Player, aggiungila alla pianificazione.
+
+<Aside type="note">Le playlist sono disponibili quando la tua licenza le include.</Aside>
+
+## Creare una playlist
+
+<Steps>
+1. Clicca `Playlist` nella barra laterale.
+2. Clicca `Nuova playlist`.
+3. Inserisci un nome e clicca `Crea`.
+</Steps>
+
+## Aggiungere progetti
+
+<Steps>
+1. Apri la playlist e clicca `Aggiungi progetto`.
+2. Cerca un progetto e selezionalo. Viene aggiunto alla fine della playlist.
+</Steps>
+
+Un progetto può entrare in una playlist solo se è pubblicato e ogni pagina ha una durata. La durata di una pagina si imposta con la sua transizione nel Kaptive Editor. I progetti che non possono essere aggiunti sono in grigio con il motivo, ad esempio `Non ancora pubblicato` o `Alcune pagine non hanno una durata`.
+
+Puoi anche aggiungere un progetto alle playlist dal Kaptive Editor. Clicca `Assegna`, poi `Playlist`. Scopri di più in [Assegnare il tuo progetto](/it/getting-started/assign/).
+
+## Riordinare e configurare i progetti
+
+Trascina un progetto dalla sua maniglia per cambiare l'ordine. I progetti vengono riprodotti dall'alto verso il basso.
+
+Apri il menu accanto a un progetto per altre opzioni:
+
+- `Una pagina per giro`: invece di riprodurre tutte le sue pagine, il progetto mostra la pagina successiva a ogni giro della playlist. Questa opzione è disponibile per i progetti con più di una pagina.
+- `Rimuovi dalla playlist`: rimuove il progetto dalla playlist.
+
+<Aside type="caution">Se in seguito un progetto pubblicato perde la durata di una pagina, i player lo saltano. La playlist lo segnala con `Saltato: alcune pagine non hanno una durata`.</Aside>
+
+## Riprodurre una playlist sui player
+
+<Steps>
+1. Apri la pianificazione e trascina su un intervallo di tempo nel calendario.
+2. Imposta il tipo di contenuto su `Playlist` e seleziona la tua playlist.
+3. In `Assegna player`, seleziona i player, poi clicca `Aggiungi voce`.
+4. Pubblica la pianificazione.
+</Steps>
+
+Una playlist non può essere impostata come progetto predefinito di un player. Scopri di più in [Pianificare il tuo progetto](/it/getting-started/schedule/).
+
+## Pubblicare e annullare le modifiche
+
+Le modifiche a una playlist restano una bozza finché non le pubblichi. Clicca `Pubblica` nella pagina della playlist per aggiornare i player che la riproducono dalla pianificazione pubblicata. Le altre modifiche alla pianificazione non vengono pubblicate.
+
+Per annullare le modifiche, usa `Ripristina` per tornare alla versione pubblicata.
+
+## Rinominare o eliminare una playlist
+
+Apri il menu di una playlist nell'elenco o nella sua pagina e seleziona `Rinomina` o `Elimina playlist`. Eliminando una playlist vengono eliminate anche le voci della pianificazione che la riproducono.
+
+<Aside type="tip">Gli editor possono creare e modificare le playlist. Per eliminare e pubblicare le playlist serve il ruolo manager o admin. Scopri di più in [Ruoli](/it/guides/general/roles/).</Aside>

@@ -1,0 +1,65 @@
+---
+title: Playlist erstellen
+description: Spielen Sie mit Playlists mehrere Projekte nacheinander auf Ihren Kaptive Players ab.
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+## So funktionieren Playlists
+
+Eine Playlist spielt mehrere Projekte nacheinander ab. Wenn das letzte Projekt endet, beginnt die Playlist wieder beim ersten. Um eine Playlist auf Ihren Kaptive Players anzuzeigen, fügen Sie sie dem Schedule hinzu.
+
+<Aside type="note">Playlists sind verfügbar, wenn Ihre Lizenz sie enthält.</Aside>
+
+## Playlist erstellen
+
+<Steps>
+1. Klicken Sie in der Seitenleiste auf `Playlists`.
+2. Klicken Sie auf `Neue Playlist`.
+3. Geben Sie einen Namen ein und klicken Sie auf `Erstellen`.
+</Steps>
+
+## Projekte hinzufügen
+
+<Steps>
+1. Öffnen Sie die Playlist und klicken Sie auf `Projekt hinzufügen`.
+2. Suchen Sie ein Projekt und wählen Sie es aus. Es wird am Ende der Playlist hinzugefügt.
+</Steps>
+
+Ein Projekt kann einer Playlist nur hinzugefügt werden, wenn es veröffentlicht ist und jede Seite eine Dauer hat. Die Dauer einer Seite legen Sie über ihren Übergang im Kaptive Editor fest. Projekte, die nicht hinzugefügt werden können, sind ausgegraut und zeigen den Grund an, zum Beispiel `Noch nicht veröffentlicht` oder `Einige Seiten haben keine Dauer`.
+
+Sie können ein Projekt auch im Kaptive Editor zu Playlists hinzufügen. Klicken Sie auf `Zuweisen` und dann auf `Playlists`. Mehr dazu unter [Projekt zuweisen](/de/getting-started/assign/).
+
+## Projekte anordnen und konfigurieren
+
+Ziehen Sie ein Projekt an seinem Griff, um die Reihenfolge zu ändern. Die Projekte werden von oben nach unten abgespielt.
+
+Öffnen Sie das Menü neben einem Projekt für weitere Optionen:
+
+- `Eine Seite pro Runde`: Anstatt alle Seiten abzuspielen, zeigt das Projekt bei jedem Durchlauf der Playlist seine nächste Seite. Diese Option ist für Projekte mit mehr als einer Seite verfügbar.
+- `Aus Playlist entfernen`: entfernt das Projekt aus der Playlist.
+
+<Aside type="caution">Verliert ein veröffentlichtes Projekt später die Dauer einer Seite, überspringen die Players es. Die Playlist kennzeichnet es mit `Übersprungen: Einige Seiten haben keine Dauer`.</Aside>
+
+## Playlist auf Players abspielen
+
+<Steps>
+1. Öffnen Sie den Schedule und ziehen Sie im Kalender über einen Zeitraum.
+2. Stellen Sie den Inhaltstyp auf `Playlist` und wählen Sie Ihre Playlist aus.
+3. Wählen Sie unter `Player zuweisen` die Players aus und klicken Sie auf `Eintrag hinzufügen`.
+4. Veröffentlichen Sie den Schedule.
+</Steps>
+
+Eine Playlist kann nicht als Standardprojekt eines Players festgelegt werden. Mehr dazu unter [Projekt planen](/de/getting-started/schedule/).
+
+## Änderungen veröffentlichen und verwerfen
+
+Änderungen an einer Playlist bleiben ein Entwurf, bis Sie sie veröffentlichen. Klicken Sie auf der Seite der Playlist auf `Veröffentlichen`, um die Players zu aktualisieren, die sie über den veröffentlichten Schedule abspielen. Andere Änderungen am Schedule werden nicht veröffentlicht.
+
+Um Ihre Änderungen zu verwerfen, kehren Sie mit `Zurücksetzen` zur veröffentlichten Version zurück.
+
+## Playlist umbenennen oder löschen
+
+Öffnen Sie das Menü einer Playlist in der Liste oder auf ihrer Seite und wählen Sie `Umbenennen` oder `Playlist löschen`. Beim Löschen einer Playlist werden auch die Schedule-Einträge gelöscht, die sie abspielen.
+
+<Aside type="tip">Editoren können Playlists erstellen und bearbeiten. Zum Löschen und Veröffentlichen von Playlists ist die Rolle Manager oder Admin erforderlich. Mehr dazu unter [Rollen](/de/guides/general/roles/).</Aside>

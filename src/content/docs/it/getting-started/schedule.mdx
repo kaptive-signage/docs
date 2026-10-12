@@ -1,29 +1,39 @@
 ---
-title: Pianificare il tuo Progetto
-description: Pianifica il tuo Progetto sui tuoi Kaptive Player.
+title: Pianificare il tuo progetto
+description: Pianifica il tuo progetto sui tuoi Kaptive Player.
 ---
-## Come Funziona la Pianificazione sui Kaptive Player
 
-Probabilmente hai già letto il capitolo sull'assegnazione dei Progetti. La pianificazione è l'altro modo per mostrare Contenuti sui tuoi Kaptive Player. Invece di assegnare un singolo Progetto a un Player, puoi pianificare diversi Progetti in una Pianificazione. Una Pianificazione è una raccolta di Progetti che vengono mostrati su un Player in orari specifici.
+import { Aside, Steps } from '@astrojs/starlight/components';
 
-Quando crei una Pianificazione, puoi selezionare quali Progetti vuoi includere nella Pianificazione e quando devono essere mostrati sui Player assegnati.
+## Come funziona la pianificazione sui Kaptive Player
 
-![Pianifica i Progetti](../../../../assets/getting-started/schedule/schedule.png)
+La pianificazione mostra contenuti sui tuoi Kaptive Player in orari precisi. Invece di mostrare sempre un unico progetto predefinito, crei delle voci nella pianificazione. Ogni voce riproduce un progetto o una [playlist](/it/getting-started/playlists/) sui player che scegli, in un intervallo di tempo che può ripetersi.
 
-Cliccando su un Progetto nella Pianificazione, puoi selezionare l'intervallo di tempo in cui il Progetto deve essere mostrato e configurare il suo intervallo di ripetizione. La ripetizione può essere impostata solo quando nessun altro Progetto pianificato si sovrappone nel futuro.
+Apri `Programmazione` nella barra laterale per vedere tutte le voci del tuo workspace nel calendario. Passa da `Settimana` a `Giorno` e usa `Oggi` per tornare alla data corrente. Puoi filtrare il calendario per progetto, player o tag.
 
-![Modifica Pianificazione](../../../../assets/getting-started/schedule/edit-schedule.png)
+## Creare una voce
 
-Puoi aggiungere quanti Progetti vuoi a una Pianificazione, ma non possono sovrapporsi nel tempo.
+<Steps>
+1. Nel calendario, clicca e trascina sull'intervallo di tempo che la voce deve coprire.
+2. Scegli `Progetto` o `Playlist`, poi seleziona il contenuto.
+3. In `Assegna player`, seleziona i player che mostrano la voce.
+4. Clicca `Aggiungi voce`.
+</Steps>
 
-## Assegna una Pianificazione a un Player
+Per cambiare l'orario, clicca la voce nel calendario. In `Modifica voce` puoi cambiare la `Data`, l'`Ora di inizio` e l'`Ora di fine`, oppure attivare `Tutto il giorno`. In `Ripetizione`, scegli `Non si ripete`, `Giornaliera` o `Settimanale`. Per una voce ripetuta, imposta quando termina oppure scegli `Nessuna data di fine`. Clicca `Salva` per applicare le modifiche.
 
-Dopo aver creato una Pianificazione, puoi assegnarla a un Player cliccando il pulsante `Assign` nell'editor della Pianificazione. Quando una Pianificazione è assegnata a un Player, il Player mostra i Progetti nella Pianificazione secondo gli intervalli di tempo e le impostazioni di ripetizione definiti.
+Quando elimini una voce ripetuta, puoi eliminare `Questa occorrenza` o `Tutte le occorrenze`.
 
-Quando una Pianificazione è assegnata a un Player ma nessun Progetto è pianificato per essere mostrato nell'orario corrente, il Player mostra il Progetto predefinito assegnato. Questo ti permette di avere un Contenuto di riserva quando nessun Progetto pianificato è attivo. Il Contenuto predefinito viene configurato assegnando un Progetto al Player.
+<Aside type="note">Le voci possono sovrapporsi. Quando due voci per lo stesso player si sovrappongono, il player mostra quella più breve. Così puoi inserire una voce breve dentro una più lunga, ad esempio un annuncio speciale durante il contenuto abituale della giornata.</Aside>
 
-![Assegnazione della Pianificazione](../../../../assets/getting-started/schedule/assign-schedule.png)
+<Aside type="tip">In `Script di avvio` e `Script di fine` puoi eseguire uno script sul player quando la voce inizia o finisce.</Aside>
 
-## Pubblica gli Aggiornamenti della tua Pianificazione
+## Scegliere i player
 
-Quando apporti modifiche a una Pianificazione, devi pubblicare le modifiche affinché abbiano effetto sui Player assegnati. Per pubblicare le modifiche, clicca semplicemente il pulsante arancione `Publish` nell'editor della Pianificazione. Questo aggiorna la Pianificazione su tutti i Player che attualmente hanno questa Pianificazione assegnata.
+La pianificazione è condivisa da tutto il tuo workspace. Scegli i player di destinazione direttamente su ogni voce: quando crei o modifichi una voce, seleziona i player in `Assegna player`. Ogni player mostra poi le voci che lo riguardano, secondo i loro intervalli di tempo e le impostazioni di ripetizione. Puoi filtrare la pianificazione per player o per tag per vedere cosa mostra un player specifico.
+
+Quando per un player non è attiva nessuna voce nell'orario corrente, il player mostra il suo progetto predefinito. In questo modo hai un contenuto di riserva al di fuori delle fasce pianificate. Scopri come impostare il progetto predefinito in [Assegnare il tuo progetto](/it/getting-started/assign/).
+
+## Pubblica gli aggiornamenti della tua pianificazione
+
+Le modifiche alla pianificazione restano una bozza finché non le pubblichi. Clicca il pulsante arancione `Pubblica` nella pianificazione per aggiornare subito tutti i player. Per annullare le modifiche, usa `Ripristina` per tornare alla pianificazione pubblicata.

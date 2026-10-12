@@ -1,21 +1,59 @@
 ---
-title: Assegnare il tuo Progetto
-description: Assegna il tuo Progetto ai tuoi Kaptive Player.
+title: Assegnare il tuo progetto
+description: Scegli dove viene riprodotto il tuo progetto, come progetto predefinito sui player, nelle playlist, nella pianificazione o tramite un link pubblico.
 ---
-## Come Funziona l'Assegnazione del Progetto a un Kaptive Player
 
-Non appena hai creato il tuo Progetto, vorrai assegnarlo ai tuoi Kaptive Player. Questo passaggio si chiama assegnazione.
+import { Aside, Steps } from '@astrojs/starlight/components';
 
-Cliccando il pulsante `Assign` in alto a destra nel Kaptive Editor, potrai selezionare a quali Player vuoi assegnare il tuo Progetto. Una volta selezionati i Player, clicca su `Assign` per avviare la proiezione sui Kaptive Player.
+## Come funziona l'assegnazione del progetto
 
-![Assegna il Progetto ai Player](../../../../assets/getting-started/assign/assign-project.png)
+Non appena hai creato il tuo progetto, vorrai mostrarlo sui tuoi Kaptive Player. Questo passaggio si chiama assegnazione.
 
-Il Progetto assegnato inizierà a essere riprodotto sui Kaptive Player selezionati immediatamente. Puoi assegnare lo stesso Progetto a più Player. Il Progetto assegnato sarà il Contenuto predefinito riprodotto sui Player assegnati.
+Clicca il pulsante `Assegna` in alto a destra nel Kaptive Editor. La finestra `Dove diffondere questo progetto?` raccoglie tutti i punti in cui il progetto può essere riprodotto, con una scheda per ogni destinazione:
 
-Leggi nel prossimo capitolo come funziona la pianificazione dei Progetti su Kaptive.
+- `Progetto predefinito dei player`: il progetto che i player mostrano quando non è pianificato nient'altro.
+- `Playlist`: le playlist che contengono il progetto.
+- `Pianificazione`: le fasce orarie in cui il progetto viene riprodotto.
+- `Link pubblico`: un link che chiunque può aprire per vedere il progetto.
 
-## Pubblica gli Aggiornamenti del tuo Progetto
+<Aside type="note">Alcune schede dipendono dalla tua licenza e dal tuo ruolo. Ad esempio, `Playlist` e `Pianificazione` compaiono solo se la tua licenza include queste funzionalità.</Aside>
 
-A volte vorrai aggiornare il tuo Progetto dopo averlo assegnato ai tuoi Player. Ad esempio, potresti voler modificare alcuni Contenuti o correggere un errore di battitura. In questo caso, puoi semplicemente cliccare il pulsante arancione `Publish` accanto al pulsante `Assign` nel Kaptive Editor. Questo pubblicherà l'ultima versione del tuo Progetto su tutti i Player attualmente assegnati.
+## Impostare il progetto predefinito sui player
 
-Questo è particolarmente importante quando hai pianificato il tuo Progetto in una Pianificazione. Affinché la Pianificazione mostri l'ultima versione del tuo Progetto, devi pubblicare le modifiche dopo aver modificato il Progetto. Scopri di più sulla pianificazione nel prossimo capitolo.
+Il progetto predefinito viene riprodotto su un player ogni volta che non è pianificato nient'altro.
+
+<Steps>
+1. Nella finestra `Assegna`, clicca `Progetto predefinito dei player`.
+2. Seleziona i player. Puoi cercare per nome o filtrare per tag.
+3. Clicca `Salva`.
+</Steps>
+
+Il salvataggio pubblica il progetto e lo avvia subito sui player selezionati. Puoi assegnare lo stesso progetto a più player. Per rimuovere il progetto da tutti i player, deseleziona tutti i player e clicca `Annulla tutte le assegnazioni`.
+
+<Aside type="tip">Quando ogni pagina del progetto ha una durata e nulla è interattivo, i player che mostrano lo stesso progetto lo riproducono automaticamente in sincronia.</Aside>
+
+## Aggiungere il progetto alle playlist
+
+<Steps>
+1. Nella finestra `Assegna`, clicca `Playlist`.
+2. Seleziona le playlist a cui il progetto deve appartenere. Il progetto viene aggiunto alla fine di ogni playlist.
+3. Clicca `Salva`.
+</Steps>
+
+Il salvataggio pubblica il progetto e le playlist modificate. Se il tuo ruolo non può pubblicare la pianificazione, le playlist vengono salvate come bozze finché una persona con il ruolo adeguato non le pubblica.
+
+<Aside type="note">Ogni pagina deve avere una durata prima che un progetto possa entrare in una playlist. Se alcune pagine non ce l'hanno, la finestra mostra `Alcune pagine non hanno una durata` e puoi solo rimuovere il progetto dalle playlist.</Aside>
+
+Scopri di più in [Creare una playlist](/it/getting-started/playlists/).
+
+## Aprire il progetto nella pianificazione
+
+Nella scheda `Pianificazione`, clicca `Apri`. La pianificazione si apre filtrata su questo progetto, così puoi vedere e modificare le sue fasce orarie. Scopri di più in [Pianificare il tuo progetto](/it/getting-started/schedule/).
+
+## Condividere un link pubblico
+
+Attiva `Link pubblico` per permettere a chiunque abbia il link di vedere il progetto. Usa `Copia link` o `Copia codice di incorporamento` per condividerlo o incorporarlo in un sito web. Scopri di più in [Condividere e incorporare i progetti](/it/guides/editor/public-sharing/).
+
+## Pubblica gli aggiornamenti del tuo progetto
+
+A volte vorrai aggiornare il tuo progetto dopo averlo assegnato. Ad esempio, potresti voler modificare alcuni contenuti o correggere un errore di battitura. Clicca il pulsante arancione `Pubblica` accanto al pulsante `Assegna` nel Kaptive Editor. Questo pubblica l'ultima versione del tuo progetto su tutti i player che lo mostrano, come progetto predefinito, in una playlist o tramite la pianificazione.

@@ -1,22 +1,59 @@
 ---
-title: Assigner votre Projet
-description: Assignez votre Projet à vos Kaptive Players.
+title: Assigner votre projet
+description: Choisissez où votre projet est diffusé, comme projet par défaut sur des players, dans des playlists, dans le schedule ou via un lien public.
 ---
 
-## Comment fonctionne l'Assignation de votre Projet à un Kaptive Player
+import { Aside, Steps } from '@astrojs/starlight/components';
 
-Dès que vous avez créé votre Projet, vous voudrez l'assigner à vos Kaptive Players. Cette étape s'appelle l'Assignation.
+## Comment fonctionne l'assignation de votre projet
 
-En cliquant sur le bouton `Assign` en haut à droite dans le Kaptive Editor, vous pourrez sélectionner les Players auxquels vous souhaitez assigner votre Projet. Une fois les Players sélectionnés, cliquez sur `Assign` pour lancer la diffusion sur les Kaptive Players.
+Dès que vous avez créé votre projet, vous voudrez le diffuser sur vos Kaptive Players. Cette étape s'appelle l'assignation.
 
-![Assigner un projet aux Players](../../../../assets/getting-started/assign/assign-project.png)
+Cliquez sur le bouton `Attribuer` en haut à droite dans le Kaptive Editor. La fenêtre `Où diffuser ce projet ?` regroupe tous les endroits où votre projet peut être diffusé, avec une carte par destination :
 
-Le Projet assigné commence à être diffusé immédiatement sur les Kaptive Players sélectionnés. Vous pouvez assigner le même Projet à plusieurs Players. Le Projet assigné sera le Contenu par défaut diffusé sur les Players assignés.
+- `Projet par défaut des players` : le projet que les players affichent lorsque rien d'autre n'est planifié.
+- `Playlists` : les playlists qui contiennent le projet.
+- `Planning` : les créneaux horaires pendant lesquels le projet est diffusé.
+- `Lien public` : un lien que tout le monde peut ouvrir pour voir le projet.
 
-Découvrez dans le chapitre suivant comment fonctionne la planification de Projets sur Kaptive.
+<Aside type="note">Certaines cartes dépendent de votre licence et de votre rôle. Par exemple, `Playlists` et `Planning` n'apparaissent que si votre licence inclut ces fonctionnalités.</Aside>
 
-## Publier les mises à jour de votre Projet
+## Définir le projet par défaut sur des players
 
-Il arrive que vous souhaitiez mettre à jour votre Projet après l'avoir assigné à vos Players. Par exemple, vous pourriez vouloir modifier du Contenu ou corriger une faute. Dans ce cas, cliquez simplement sur le bouton orange `Publish` situé juste à côté du bouton `Assign` dans le Kaptive Editor. Cela publiera la dernière version de votre Projet sur tous les Players qui lui sont actuellement assignés.
+Le projet par défaut est diffusé sur un player lorsque rien d'autre n'est planifié.
 
-C'est particulièrement important lorsque vous avez planifié votre Projet dans un Schedule. Pour que le Schedule affiche la dernière version de votre Projet, vous devez publier les modifications après avoir édité votre Projet. En savoir plus sur la planification dans le chapitre suivant.
+<Steps>
+1. Dans la fenêtre `Attribuer`, cliquez sur `Projet par défaut des players`.
+2. Sélectionnez les players. Vous pouvez rechercher par nom ou filtrer par tag.
+3. Cliquez sur `Enregistrer`.
+</Steps>
+
+L'enregistrement publie votre projet et le lance immédiatement sur les players sélectionnés. Vous pouvez assigner le même projet à plusieurs players. Pour retirer le projet de tous les players, désélectionnez tous les players et cliquez sur `Tout désattribuer`.
+
+<Aside type="tip">Lorsque chaque page du projet a une durée et que rien n'est interactif, les players qui affichent le même projet le diffusent automatiquement de manière synchronisée.</Aside>
+
+## Ajouter le projet à des playlists
+
+<Steps>
+1. Dans la fenêtre `Attribuer`, cliquez sur `Playlists`.
+2. Sélectionnez les playlists auxquelles le projet doit appartenir. Le projet est ajouté à la fin de chaque playlist.
+3. Cliquez sur `Enregistrer`.
+</Steps>
+
+L'enregistrement publie votre projet et les playlists modifiées. Si votre rôle ne permet pas de publier le schedule, les playlists sont enregistrées comme brouillons jusqu'à ce qu'une personne disposant du rôle adéquat les publie.
+
+<Aside type="note">Chaque page doit avoir une durée avant qu'un projet puisse rejoindre une playlist. Si certaines pages n'en ont pas, la fenêtre affiche `Certaines pages n'ont pas de durée` et vous pouvez seulement retirer le projet des playlists.</Aside>
+
+En savoir plus dans [Créer une playlist](/fr/getting-started/playlists/).
+
+## Ouvrir le projet dans le schedule
+
+Sur la carte `Planning`, cliquez sur `Ouvrir`. Le schedule s'ouvre filtré sur ce projet, pour que vous puissiez voir et modifier ses créneaux. En savoir plus dans [Planifier votre projet](/fr/getting-started/schedule/).
+
+## Partager un lien public
+
+Activez `Lien public` pour permettre à toute personne disposant du lien de voir le projet. Utilisez `Copier le lien` ou `Copier le code d'intégration` pour le partager ou l'intégrer dans un site web. En savoir plus dans [Partager et intégrer des projets](/fr/guides/editor/public-sharing/).
+
+## Publier les mises à jour de votre projet
+
+Il arrive que vous souhaitiez mettre à jour votre projet après l'avoir assigné. Par exemple, vous pourriez vouloir modifier du contenu ou corriger une faute. Cliquez sur le bouton orange `Publier` situé juste à côté du bouton `Attribuer` dans le Kaptive Editor. Cela publie la dernière version de votre projet sur tous les players qui l'affichent, que ce soit comme projet par défaut, dans une playlist ou via le schedule.

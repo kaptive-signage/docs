@@ -1,0 +1,65 @@
+---
+title: Créer une playlist
+description: Diffusez plusieurs projets les uns après les autres sur vos Kaptive Players grâce aux playlists.
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+## Comment fonctionnent les playlists
+
+Une playlist diffuse plusieurs projets les uns après les autres. Lorsque le dernier projet se termine, la playlist recommence depuis le premier. Pour afficher une playlist sur vos Kaptive Players, ajoutez-la au schedule.
+
+<Aside type="note">Les playlists sont disponibles lorsque votre licence les inclut.</Aside>
+
+## Créer une playlist
+
+<Steps>
+1. Cliquez sur `Playlists` dans la barre latérale.
+2. Cliquez sur `Nouvelle playlist`.
+3. Saisissez un nom et cliquez sur `Créer`.
+</Steps>
+
+## Ajouter des projets
+
+<Steps>
+1. Ouvrez la playlist et cliquez sur `Ajouter un projet`.
+2. Recherchez un projet et sélectionnez-le. Il est ajouté à la fin de la playlist.
+</Steps>
+
+Un projet ne peut rejoindre une playlist que s'il est publié et que chaque page a une durée. La durée d'une page se définit avec sa transition dans le Kaptive Editor. Les projets qui ne peuvent pas être ajoutés sont grisés avec la raison, par exemple `Pas encore publié` ou `Certaines pages n'ont pas de durée`.
+
+Vous pouvez aussi ajouter un projet à des playlists depuis le Kaptive Editor. Cliquez sur `Attribuer`, puis sur `Playlists`. En savoir plus dans [Assigner votre projet](/fr/getting-started/assign/).
+
+## Réorganiser et configurer les projets
+
+Faites glisser un projet par sa poignée pour changer l'ordre. Les projets sont diffusés de haut en bas.
+
+Ouvrez le menu à côté d'un projet pour plus d'options :
+
+- `Une page par tour` : au lieu de diffuser toutes ses pages, le projet affiche sa page suivante à chaque tour de la playlist. Cette option est disponible pour les projets de plus d'une page.
+- `Retirer de la playlist` : retire le projet de la playlist.
+
+<Aside type="caution">Si un projet publié perd plus tard la durée d'une page, les players l'ignorent. La playlist le signale avec `Ignoré : certaines pages n'ont pas de durée`.</Aside>
+
+## Diffuser une playlist sur des players
+
+<Steps>
+1. Ouvrez le schedule et faites glisser sur une plage horaire dans le calendrier.
+2. Changez le type de contenu en `Playlist` et sélectionnez votre playlist.
+3. Sous `Attribuer des players`, sélectionnez les players, puis cliquez sur `Ajouter une entrée`.
+4. Publiez le schedule.
+</Steps>
+
+Une playlist ne peut pas être définie comme projet par défaut d'un player. En savoir plus dans [Planifier votre projet](/fr/getting-started/schedule/).
+
+## Publier et annuler les modifications
+
+Les modifications d'une playlist restent un brouillon jusqu'à leur publication. Cliquez sur `Publier` sur la page de la playlist pour mettre à jour les players qui la diffusent depuis le schedule publié. Les autres modifications du schedule ne sont pas publiées.
+
+Pour annuler vos modifications, utilisez `Rétablir` pour revenir à la version publiée.
+
+## Renommer ou supprimer une playlist
+
+Ouvrez le menu d'une playlist dans la liste ou sur sa page et sélectionnez `Renommer` ou `Supprimer la playlist`. La suppression d'une playlist supprime aussi les entrées du schedule qui la diffusent.
+
+<Aside type="tip">Les éditeurs peuvent créer et modifier des playlists. La suppression et la publication de playlists nécessitent un rôle de manager ou d'admin. En savoir plus dans [Rôles](/fr/guides/general/roles/).</Aside>

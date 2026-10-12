@@ -3,28 +3,37 @@ title: Projekt planen
 description: Planen Sie Ihr Projekt auf Ihren Kaptive Players.
 ---
 
+import { Aside, Steps } from '@astrojs/starlight/components';
+
 ## So funktioniert die Planung auf Kaptive Players
 
-Sie haben wahrscheinlich bereits das Kapitel über die Projektzuweisung gelesen. Die Planung ist die andere Möglichkeit, Inhalte auf Ihren Kaptive Players anzuzeigen. Anstatt einem Player ein einzelnes Projekt zuzuweisen, können Sie mehrere Projekte in einem Schedule planen. Ein Schedule ist eine Sammlung von Projekten, die zu bestimmten Zeiten auf einem Player angezeigt werden.
+Mit der Planung zeigen Sie Inhalte zu bestimmten Zeiten auf Ihren Kaptive Players an. Anstatt ständig ein einziges Standardprojekt anzuzeigen, erstellen Sie Einträge im Schedule. Jeder Eintrag spielt ein Projekt oder eine [Playlist](/de/getting-started/playlists/) auf den von Ihnen gewählten Players ab, in einem Zeitraum, der sich wiederholen kann.
 
-Beim Erstellen eines Schedules können Sie auswählen, welche Projekte im Schedule enthalten sein sollen und wann sie auf den zugewiesenen Players angezeigt werden sollen.
+Öffnen Sie `Zeitplan` in der Seitenleiste, um alle Einträge Ihres Workspaces im Kalender zu sehen. Wechseln Sie zwischen `Woche` und `Tag` und springen Sie mit `Heute` zum aktuellen Datum zurück. Sie können den Kalender nach Projekt, Player oder Tag filtern.
 
-![Projekte planen](../../../../assets/getting-started/schedule/schedule.png)
+## Eintrag erstellen
 
-Wenn Sie auf ein Projekt im Schedule klicken, können Sie den Zeitraum auswählen, in dem das Projekt angezeigt werden soll, und das Wiederholungsintervall konfigurieren. Die Wiederholung kann nur eingestellt werden, wenn sich keine anderen geplanten Projekte in der Zukunft überschneiden.
+<Steps>
+1. Klicken und ziehen Sie im Kalender über den Zeitraum, den der Eintrag abdecken soll.
+2. Wählen Sie `Projekt` oder `Playlist` und dann den Inhalt.
+3. Wählen Sie unter `Player zuweisen` die Players aus, die den Eintrag anzeigen.
+4. Klicken Sie auf `Eintrag hinzufügen`.
+</Steps>
 
-![Schedule bearbeiten](../../../../assets/getting-started/schedule/edit-schedule.png)
+Um die Zeit zu ändern, klicken Sie im Kalender auf den Eintrag. Unter `Eintrag bearbeiten` können Sie `Datum`, `Startzeit` und `Endzeit` ändern oder `Ganztägig` aktivieren. Wählen Sie unter `Wiederholung` die Option `Keine Wiederholung`, `Täglich` oder `Wöchentlich`. Legen Sie bei einem wiederkehrenden Eintrag fest, wann er endet, oder wählen Sie `Kein Enddatum`. Klicken Sie auf `Speichern`, um Ihre Änderungen zu übernehmen.
 
-Sie können einem Schedule beliebig viele Projekte hinzufügen, aber sie dürfen sich zeitlich nicht überschneiden.
+Beim Löschen eines wiederkehrenden Eintrags können Sie `Dieses Vorkommen` oder `Alle Vorkommen` löschen.
 
-## Einen Schedule einem Player zuweisen
+<Aside type="note">Einträge dürfen sich überschneiden. Wenn sich zwei Einträge für denselben Player überschneiden, zeigt der Player den kürzeren an. So können Sie einen kurzen Eintrag in einen längeren setzen, zum Beispiel eine besondere Ankündigung während des regulären Tagesinhalts.</Aside>
 
-Nachdem Sie einen Schedule erstellt haben, können Sie ihn einem Player zuweisen, indem Sie auf die Schaltfläche `Assign` im Schedule-Editor klicken. Wenn ein Schedule einem Player zugewiesen ist, zeigt der Player die Projekte im Schedule gemäß den definierten Zeiträumen und Wiederholungseinstellungen an.
+<Aside type="tip">Unter `Startskript` und `Endskript` können Sie ein Skript auf dem Player ausführen, wenn der Eintrag beginnt oder endet.</Aside>
 
-Wenn ein Schedule einem Player zugewiesen ist, aber zum aktuellen Zeitpunkt kein Projekt geplant ist, zeigt der Player das zugewiesene Standardprojekt an. So können Sie Ersatzinhalte bereitstellen, wenn keine geplanten Projekte aktiv sind. Der Standardinhalt wird konfiguriert, indem dem Player ein Projekt zugewiesen wird.
+## Players auswählen
 
-![Schedule-Zuweisung](../../../../assets/getting-started/schedule/assign-schedule.png)
+Der Schedule gilt für Ihren gesamten Workspace. Die Ziel-Players wählen Sie direkt bei jedem Eintrag: Wenn Sie einen Eintrag erstellen oder bearbeiten, wählen Sie die Players unter `Player zuweisen` aus. Jeder Player zeigt dann die Einträge an, die ihn betreffen, gemäß ihren Zeiträumen und Wiederholungseinstellungen. Sie können den Schedule nach Player oder Tag filtern, um zu sehen, was ein bestimmter Player anzeigt.
+
+Wenn für einen Player zum aktuellen Zeitpunkt kein Eintrag aktiv ist, zeigt der Player sein Standardprojekt an. So haben Sie Ersatzinhalte außerhalb der geplanten Zeitfenster. Wie Sie das Standardprojekt festlegen, erfahren Sie unter [Projekt zuweisen](/de/getting-started/assign/).
 
 ## Aktualisierungen Ihres Schedules veröffentlichen
 
-Wenn Sie Änderungen an einem Schedule vornehmen, müssen Sie die Änderungen veröffentlichen, damit sie auf den zugewiesenen Players wirksam werden. Um die Änderungen zu veröffentlichen, klicken Sie einfach auf die orangefarbene Schaltfläche `Publish` im Schedule-Editor. Dadurch wird der Schedule auf allen Players aktualisiert, denen dieser Schedule derzeit zugewiesen ist.
+Änderungen am Schedule bleiben ein Entwurf, bis Sie sie veröffentlichen. Klicken Sie im Schedule auf die orangefarbene Schaltfläche `Veröffentlichen`, um alle Players sofort zu aktualisieren. Um Ihre Änderungen zu verwerfen, kehren Sie mit `Zurücksetzen` zum veröffentlichten Schedule zurück.

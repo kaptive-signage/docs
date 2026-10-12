@@ -1,22 +1,59 @@
 ---
 title: Projekt zuweisen
-description: Weisen Sie Ihr Projekt Ihren Kaptive Players zu.
+description: Legen Sie fest, wo Ihr Projekt läuft – als Standardprojekt auf Players, in Playlists, im Schedule oder über einen öffentlichen Link.
 ---
 
-## So funktioniert die Zuweisung Ihres Projekts an einen Kaptive Player
+import { Aside, Steps } from '@astrojs/starlight/components';
 
-Sobald Sie Ihr Projekt erstellt haben, möchten Sie es Ihren Kaptive Players zuweisen. Dieser Schritt wird als Zuweisung bezeichnet.
+## So funktioniert die Zuweisung Ihres Projekts
 
-Wenn Sie auf die Schaltfläche `Assign` oben rechts im Kaptive Editor klicken, können Sie auswählen, welchen Players Sie Ihr Projekt zuweisen möchten. Nachdem Sie die Players ausgewählt haben, klicken Sie auf `Assign`, um die Wiedergabe auf den Kaptive Players zu starten.
+Sobald Sie Ihr Projekt erstellt haben, möchten Sie es auf Ihren Kaptive Players anzeigen. Dieser Schritt wird als Zuweisung bezeichnet.
 
-![Projekt den Players zuweisen](../../../../assets/getting-started/assign/assign-project.png)
+Klicken Sie oben rechts im Kaptive Editor auf die Schaltfläche `Zuweisen`. Der Dialog `Wo soll dieses Projekt laufen?` fasst alle Orte zusammen, an denen Ihr Projekt laufen kann, mit einer Karte pro Ziel:
 
-Das zugewiesene Projekt wird sofort auf den ausgewählten Kaptive Players wiedergegeben. Sie können dasselbe Projekt mehreren Players zuweisen. Das zugewiesene Projekt ist der Standardinhalt, der auf den zugewiesenen Players abgespielt wird.
+- `Standardprojekt der Player`: das Projekt, das Players anzeigen, wenn nichts anderes geplant ist.
+- `Playlists`: die Playlists, die das Projekt enthalten.
+- `Zeitplan`: die Zeitfenster, in denen das Projekt abgespielt wird.
+- `Öffentlicher Link`: ein Link, über den alle das Projekt ansehen können.
 
-Erfahren Sie im nächsten Kapitel, wie die Planung von Projekten auf Kaptive funktioniert.
+<Aside type="note">Einige Karten hängen von Ihrer Lizenz und Ihrer Rolle ab. So erscheinen `Playlists` und `Zeitplan` nur, wenn Ihre Lizenz diese Funktionen enthält.</Aside>
+
+## Standardprojekt auf Players festlegen
+
+Das Standardprojekt läuft auf einem Player, wann immer nichts anderes geplant ist.
+
+<Steps>
+1. Klicken Sie im Dialog `Zuweisen` auf `Standardprojekt der Player`.
+2. Wählen Sie die Players aus. Sie können nach Namen suchen oder nach Tag filtern.
+3. Klicken Sie auf `Speichern`.
+</Steps>
+
+Beim Speichern wird Ihr Projekt veröffentlicht und sofort auf den ausgewählten Players gestartet. Sie können dasselbe Projekt mehreren Players zuweisen. Um das Projekt von allen Players zu entfernen, heben Sie die Auswahl aller Players auf und klicken Sie auf `Alle abmelden`.
+
+<Aside type="tip">Wenn jede Seite des Projekts eine Dauer hat und nichts interaktiv ist, spielen Players mit demselben Projekt es automatisch synchron ab.</Aside>
+
+## Projekt zu Playlists hinzufügen
+
+<Steps>
+1. Klicken Sie im Dialog `Zuweisen` auf `Playlists`.
+2. Wählen Sie die Playlists aus, zu denen das Projekt gehören soll. Das Projekt wird am Ende jeder Playlist hinzugefügt.
+3. Klicken Sie auf `Speichern`.
+</Steps>
+
+Beim Speichern werden Ihr Projekt und die geänderten Playlists veröffentlicht. Wenn Ihre Rolle den Schedule nicht veröffentlichen darf, werden die Playlists als Entwürfe gespeichert, bis eine Person mit der passenden Rolle sie veröffentlicht.
+
+<Aside type="note">Jede Seite braucht eine Dauer, bevor ein Projekt einer Playlist hinzugefügt werden kann. Fehlt sie bei einigen Seiten, zeigt der Dialog `Einige Seiten haben keine Dauer` an, und Sie können das Projekt nur aus Playlists entfernen.</Aside>
+
+Mehr dazu unter [Playlist erstellen](/de/getting-started/playlists/).
+
+## Projekt im Schedule öffnen
+
+Klicken Sie auf der Karte `Zeitplan` auf `Öffnen`. Der Schedule öffnet sich gefiltert auf dieses Projekt, sodass Sie seine Zeitfenster sehen und bearbeiten können. Mehr dazu unter [Projekt planen](/de/getting-started/schedule/).
+
+## Öffentlichen Link teilen
+
+Aktivieren Sie `Öffentlicher Link`, damit alle mit dem Link das Projekt ansehen können. Mit `Link kopieren` oder `Einbettungscode kopieren` teilen Sie es oder binden es in eine Website ein. Mehr dazu unter [Projekte teilen und einbetten](/de/guides/editor/public-sharing/).
 
 ## Aktualisierungen Ihres Projekts veröffentlichen
 
-Manchmal möchten Sie Ihr Projekt aktualisieren, nachdem Sie es Ihren Players zugewiesen haben. Zum Beispiel könnten Sie Inhalte ändern oder einen Tippfehler korrigieren wollen. In diesem Fall klicken Sie einfach auf die orangefarbene Schaltfläche `Publish` direkt neben der Schaltfläche `Assign` im Kaptive Editor. Dadurch wird die neueste Version Ihres Projekts auf allen Players veröffentlicht, die ihm derzeit zugewiesen sind.
-
-Dies ist besonders wichtig, wenn Sie Ihr Projekt in einem Schedule geplant haben. Damit der Schedule die neueste Version Ihres Projekts anzeigt, müssen Sie die Änderungen nach der Bearbeitung Ihres Projekts veröffentlichen. Erfahren Sie mehr über die Planung im nächsten Kapitel.
+Manchmal möchten Sie Ihr Projekt aktualisieren, nachdem Sie es zugewiesen haben. Zum Beispiel könnten Sie Inhalte ändern oder einen Tippfehler korrigieren wollen. Klicken Sie auf die orangefarbene Schaltfläche `Veröffentlichen` direkt neben der Schaltfläche `Zuweisen` im Kaptive Editor. Dadurch wird die neueste Version Ihres Projekts auf allen Players veröffentlicht, die es anzeigen – ob als Standardprojekt, in einer Playlist oder über den Schedule.

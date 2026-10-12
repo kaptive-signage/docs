@@ -28,7 +28,7 @@ const releaseNotes = fs
   })
   .reverse();
 
-// Sidebar entries for the "Release Notes" group, newest first. Labels are the
+// Sidebar entries for the "Release notes" group, newest first. Labels are the
 // dotted version (e.g. `0.6.0`) derived from the hyphenated file name.
 const releaseNoteItems = releaseNotes.map((version) => ({
   label: version.replace(/-/g, "."),
@@ -99,11 +99,11 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: "Getting Started",
+          label: "Getting started",
           translations: {
             fr: "Premiers pas",
             de: "Erste Schritte",
-            it: "Per Iniziare",
+            it: "Per iniziare",
           },
           items: [
             {
@@ -116,67 +116,76 @@ export default defineConfig({
               slug: "index",
             },
             {
-              label: "Account & Licences",
+              label: "Account & licences",
               translations: {
-                fr: "Compte & Licences",
+                fr: "Compte & licences",
                 de: "Konto & Lizenzen",
-                it: "Account e Licenze",
+                it: "Account e licenze",
               },
               slug: "getting-started/account-and-licence",
             },
             {
-              label: "Connect a Player",
+              label: "Connect a player",
               translations: {
-                fr: "Connecter un Player",
+                fr: "Connecter un player",
                 de: "Player verbinden",
-                it: "Collegare un Player",
+                it: "Collegare un player",
               },
               slug: "getting-started/connect-player",
             },
             {
-              label: "Create a Project",
+              label: "Create a project",
               translations: {
-                fr: "Créer un Projet",
+                fr: "Créer un projet",
                 de: "Projekt erstellen",
-                it: "Creare un Progetto",
+                it: "Creare un progetto",
               },
               slug: "getting-started/create-project",
             },
             {
-              label: "Customize Page Style",
+              label: "Customize page style",
               translations: {
-                fr: "Personnaliser le Style de la Page",
+                fr: "Personnaliser le style de la page",
                 de: "Seitenstil anpassen",
-                it: "Personalizzare lo Stile della Pagina",
+                it: "Personalizzare lo stile della pagina",
               },
               slug: "getting-started/customize-page-style",
             },
             {
-              label: "Add Interactivity",
+              label: "Add interactivity",
               translations: {
-                fr: "Ajouter de l'Interactivité",
+                fr: "Ajouter de l'interactivité",
                 de: "Interaktivität hinzufügen",
-                it: "Aggiungere Interattività",
+                it: "Aggiungere interattività",
               },
               slug: "getting-started/add-interactivity",
             },
             {
-              label: "Assign your Project",
+              label: "Assign your project",
               translations: {
-                fr: "Assigner votre Projet",
+                fr: "Assigner votre projet",
                 de: "Projekt zuweisen",
-                it: "Assegnare il tuo Progetto",
+                it: "Assegnare il tuo progetto",
               },
               slug: "getting-started/assign",
             },
             {
-              label: "Schedule your Project",
+              label: "Schedule your project",
               translations: {
-                fr: "Planifier votre Projet",
+                fr: "Planifier votre projet",
                 de: "Projekt planen",
-                it: "Pianificare il tuo Progetto",
+                it: "Pianificare il tuo progetto",
               },
               slug: "getting-started/schedule",
+            },
+            {
+              label: "Create a playlist",
+              translations: {
+                fr: "Créer une playlist",
+                de: "Playlist erstellen",
+                it: "Creare una playlist",
+              },
+              slug: "getting-started/playlists",
             },
           ],
         },
@@ -228,11 +237,11 @@ export default defineConfig({
                   slug: "guides/general/roles",
                 },
                 {
-                  label: "Find your Workspace ID",
+                  label: "Find your workspace ID",
                   translations: {
-                    fr: "Trouver l'identifiant de votre Workspace",
+                    fr: "Trouver l'identifiant de votre workspace",
                     de: "Workspace-ID finden",
-                    it: "Trova il tuo Workspace ID",
+                    it: "Trova l'ID del tuo spazio di lavoro",
                   },
                   slug: "guides/general/find-workspace-id",
                 },
@@ -251,7 +260,7 @@ export default defineConfig({
                   translations: {
                     fr: "Zoomer sur le canvas du projet",
                     de: "In die Projekt-Arbeitsfläche zoomen",
-                    it: "Zoom sul canvas del progetto",
+                    it: "Zoom sull'area di disegno del progetto",
                   },
                   slug: "guides/editor/zoom-project-canvas",
                 },
@@ -310,9 +319,14 @@ export default defineConfig({
                   slug: "guides/editor/custom-fonts",
                 },
                 {
-                  label: "Hide and Schedule Pages",
+                  label: "Hide and schedule pages",
+                  translations: {
+                    fr: "Masquer et planifier des pages",
+                    de: "Seiten ausblenden und planen",
+                    it: "Nascondere e pianificare le pagine",
+                  },
                   slug: "guides/editor/page-scheduling",
-                }
+                },
               ],
             },
             {
@@ -320,15 +334,15 @@ export default defineConfig({
               translations: {
                 fr: "Alertes",
                 de: "Alarme",
-                it: "Alerte",
+                it: "Avvisi",
               },
               items: [
                 {
-                  label: "Create an Alert",
+                  label: "Create an alert",
                   translations: {
-                    fr: "Créer une Alerte",
+                    fr: "Créer une alerte",
                     de: "Alarm erstellen",
-                    it: "Creare un'Alerte",
+                    it: "Creare un avviso",
                   },
                   slug: "guides/alerts/create-an-alert",
                 },
@@ -336,36 +350,37 @@ export default defineConfig({
             },
           ],
         },
+        // Onboarding is unpublished (pages are marked `draft: true`).
+        // {
+        //   label: "Onboarding",
+        //   translations: {
+        //     fr: "Guide d'initiation",
+        //     de: "Einstieg",
+        //     it: "Guida all'avvio",
+        //   },
+        //   items: [
+        //     {
+        //       label: "Workshop",
+        //       translations: {
+        //         fr: "Workshop",
+        //         de: "Workshop",
+        //         it: "Workshop",
+        //       },
+        //       slug: "onboarding/workshop",
+        //     },
+        //     {
+        //       label: "Onboarding guide",
+        //       translations: {
+        //         fr: "Guide d'initiation",
+        //         de: "Onboarding-Leitfaden",
+        //         it: "Guida all'avvio",
+        //       },
+        //       slug: "onboarding",
+        //     },
+        //   ],
+        // },
         {
-          label: "Onboarding",
-          translations: {
-            fr: "Guide d'initiation",
-            de: "Einstieg",
-            it: "Guida all'avvio",
-          },
-          items: [
-            {
-              label: "Workshop",
-              translations: {
-                fr: "Workshop",
-                de: "Workshop",
-                it: "Workshop",
-              },
-              slug: "onboarding/workshop",
-            },
-            {
-              label: "Onboarding Guide",
-              translations: {
-                fr: "Guide d'initiation",
-                de: "Onboarding-Leitfaden",
-                it: "Guida all'avvio",
-              },
-              slug: "onboarding",
-            },
-          ],
-        },
-        {
-          label: "Release Notes",
+          label: "Release notes",
           translations: {
             fr: "Notes de version",
             de: "Versionshinweise",

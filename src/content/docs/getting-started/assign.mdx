@@ -1,21 +1,59 @@
 ---
-title: Assign your Project
-description: Assign your Project to your Kaptive Players.
+title: Assign your project
+description: Choose where your project runs, as default project on players, in playlists, in the schedule or through a public link.
 ---
-## How Assigning your Project to a Kaptive Player Works
 
-As soon as you have created your Project, you will want to assign it to your Kaptive Players. This step is called assigning.
+import { Aside, Steps } from '@astrojs/starlight/components';
 
-When clicking the `Assign` button on the top right in the Kaptive Editor, you will be able to select which Players you want to assign your Project to. Once you have selected the Players, click `Assign` to start the projection on the Kaptive Players.
+## How assigning your project works
 
-![Assign Project to Players](../../../assets/getting-started/assign/assign-project.png)
+As soon as you have created your project, you will want to show it on your Kaptive Players. This step is called assigning.
 
-The assigned Project will start playing on the selected Kaptive Players immediately. You can assign the same Project to multiple Players. The assigned Project will be the default content that plays on the assigned Players.
+Click the `Assign` button on the top right in the Kaptive Editor. The dialog `Where should this project run?` gathers every place your project can run, one card per destination:
 
-Read in the next chapter how scheduling of Projects works on Kaptive.
+- `Default project on players`: the project players show when nothing else is scheduled.
+- `Playlists`: the playlists that contain the project.
+- `Schedule`: the time slots in which the project plays.
+- `Public link`: a link anyone can open to view the project.
 
-## Publish Updates of your Project
+<Aside type="note">Some cards depend on your licence and your role. For example, `Playlists` and `Schedule` only appear when your licence includes these features.</Aside>
 
-Sometimes you will want to update your Project after you have assigned it to your Players. For example, you might want to change some content or fix a typo. In this case, you can simply click the orange `Publish` button right next to the `Assign` button in the Kaptive Editor. This will publish the latest version of your Project to all the Players that are currently assigned to it.
+## Set the default project on players
 
-This is especially important when you have scheduled your Project in a Schedule. For the Schedule to show the latest version of your Project, you need to publish the changes after editing your Project. Read more about scheduling in the next chapter.
+The default project plays on a player whenever nothing else is scheduled.
+
+<Steps>
+1. In the `Assign` dialog, click `Default project on players`.
+2. Select the players. You can search by name or filter by tag.
+3. Click `Save`.
+</Steps>
+
+Saving publishes your project and starts it on the selected players right away. You can assign the same project to multiple players. To remove the project from all players, deselect every player and click `Unassign all`.
+
+<Aside type="tip">When every page of the project has a duration and nothing is interactive, players showing the same project play it in sync automatically.</Aside>
+
+## Add the project to playlists
+
+<Steps>
+1. In the `Assign` dialog, click `Playlists`.
+2. Select the playlists the project should belong to. The project is added at the end of each playlist.
+3. Click `Save`.
+</Steps>
+
+Saving publishes your project and the changed playlists. If your role can't publish the schedule, the playlists are saved as drafts until someone with the right role publishes them.
+
+<Aside type="note">Every page needs a duration before a project can join a playlist. If some pages have none, the dialog shows `Some pages have no duration` and you can only remove the project from playlists.</Aside>
+
+Read more in [Create a playlist](/getting-started/playlists/).
+
+## Open the project in the schedule
+
+On the `Schedule` card, click `Open`. The schedule opens filtered to this project, so you can see and edit its time slots. Read more in [Schedule your project](/getting-started/schedule/).
+
+## Share a public link
+
+Turn on `Public link` to let anyone with the link view the project. Use `Copy link` or `Copy embed code` to share it or embed it in a website. Read more in [Share and embed projects](/guides/editor/public-sharing/).
+
+## Publish updates of your project
+
+Sometimes you will want to update your project after you have assigned it. For example, you might want to change some content or fix a typo. Click the orange `Publish` button right next to the `Assign` button in the Kaptive Editor. This publishes the latest version of your project to all players that show it, whether as default project, in a playlist or through the schedule.

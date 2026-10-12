@@ -4,7 +4,9 @@
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
 
-:root {
+/* `static` so the palette is always emitted, since it is referenced from plain
+ * CSS variables below rather than from utility classes. */
+@theme static {
   /* kaptive */
   --color-orange-50: #fef6ee;
   --color-orange-100: #fdebd7;
@@ -32,47 +34,130 @@
 
   --color-success: #4caf50;
 
-  --scale-factor: 1;
+  /* Starlight-tailwind accent scale, mapped to the Kaptive orange. */
+  --color-accent-50: var(--color-orange-50);
+  --color-accent-100: var(--color-orange-100);
+  --color-accent-200: var(--color-orange-200);
+  --color-accent-300: var(--color-orange-300);
+  --color-accent-400: var(--color-orange-400);
+  --color-accent-500: var(--color-orange-500);
+  --color-accent-600: var(--color-orange-600);
+  --color-accent-700: var(--color-orange-700);
+  --color-accent-800: var(--color-orange-800);
+  --color-accent-900: var(--color-orange-900);
+  --color-accent-950: var(--color-orange-950);
+}
+
+/* Semantic tokens, copied from the Kaptive app (light). */
+:root {
   --radius: 0.625rem;
-  --background: oklch(0.98 0.004 99.98);
-  --foreground: oklch(0.3438 0.0269 95.7226);
-  --card: oklch(100% 0 0);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(0.9864 0.0027 84.301);
   --card-foreground: oklch(0.1908 0.002 106.5859);
   --popover: oklch(1 0 70);
   --popover-foreground: oklch(0.2671 0.0196 98.939);
   --primary: oklch(0.68 0.1827 44.18);
+  --primary-hover: #e14f15;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.95 0.0329 70.34);
-  --secondary-foreground: oklch(0.4334 0.0177 98.6048);
-  --muted: oklch(0.9341 0.0153 90.239);
+  --secondary: oklch(0.3336 0.0098 241.9581);
+  --secondary-foreground: oklch(1 0.0001 271.152);
+  --muted: oklch(0.96 0 0);
   --muted-foreground: oklch(0.6059 0.0075 97.4233);
-  --accent: oklch(0.9563 0.008 98.8792);
+  --accent: oklch(0.9546 0.0026 107.098);
   --accent-foreground: oklch(0.2671 0.0196 98.939);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);
   --border: oklch(0.8847 0.0069 97.3627);
-  --input: oklch(0.7621 0.0156 98.3528);
+  --input: oklch(0.8847 0.0069 97.3627);
   --ring: oklch(0.68 0.1827 44.18);
-  --chart-1: oklch(0.5583 0.1276 42.9956);
-  --chart-2: oklch(0.6898 0.1581 290.4107);
-  --chart-3: oklch(0.8816 0.0276 93.128);
-  --chart-4: oklch(0.8822 0.0403 298.1792);
-  --chart-5: oklch(0.5608 0.1348 42.0584);
-  --sidebar: oklch(0.9663 0.008 98.8792);
+  --sidebar: oklch(0.9864 0.0027 84.301);
   --sidebar-foreground: oklch(0.359 0.0051 106.6524);
   --sidebar-primary: oklch(0.68 0.1827 44.18);
   --sidebar-primary-foreground: oklch(0.9881 0 0);
-  --sidebar-accent: oklch(0.9245 0.0138 92.9892);
+  --sidebar-accent: oklch(0.95 0.0067 97.461);
   --sidebar-accent-foreground: oklch(0.325 0 0);
   --sidebar-border: oklch(0.8847 0.0069 97.3627);
   --sidebar-ring: oklch(0.7731 0 0);
 
-  --sl-nav-pad-y: 1.2rem;
+  --sl-color-accent-low: var(--color-orange-100);
+  --sl-color-accent-high: var(--color-orange-700);
+}
+
+/* Semantic tokens, copied from the Kaptive app (dark). */
+:root[data-theme="dark"] {
+  --background: oklch(0.215 0.004 84);
+  --foreground: oklch(0.97 0.003 97);
+  --card: oklch(0.25 0.0045 84);
+  --card-foreground: oklch(0.97 0.003 97);
+  --popover: oklch(0.25 0.0045 84);
+  --popover-foreground: oklch(0.97 0.003 97);
+  --primary: oklch(0.68 0.1827 44.18);
+  --primary-hover: #f38844;
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.92 0.006 97);
+  --secondary-foreground: oklch(0.215 0.004 84);
+  --muted: oklch(0.305 0.005 97);
+  --muted-foreground: oklch(0.71 0.0075 97.4233);
+  --accent: oklch(0.305 0.005 97);
+  --accent-foreground: oklch(0.97 0.003 97);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.34 0.005 97);
+  --input: oklch(0.38 0.005 97);
+  --ring: oklch(0.68 0.1827 44.18);
+  --sidebar: oklch(0.25 0.0045 84);
+  --sidebar-foreground: oklch(0.9 0.004 97);
+  --sidebar-primary: oklch(0.68 0.1827 44.18);
+  --sidebar-primary-foreground: oklch(0.9881 0 0);
+  --sidebar-accent: oklch(0.305 0.005 97);
+  --sidebar-accent-foreground: oklch(0.97 0.003 97);
+  --sidebar-border: oklch(0.34 0.005 97);
+  --sidebar-ring: oklch(0.556 0 0);
+
+  --sl-color-accent-low: var(--color-orange-950);
+  --sl-color-accent-high: var(--color-orange-300);
+}
+
+/* Wire Starlight's palette to the semantic tokens. Starlight's gray scale runs
+ * from "white" (strongest text) to "black" (page background) in both themes,
+ * so the same mapping works for light and dark. */
+:root,
+:root[data-theme="light"],
+:root[data-theme="dark"] {
+  --sl-color-white: var(--foreground);
+  --sl-color-gray-1: var(--foreground);
+  --sl-color-gray-2: var(--sidebar-foreground);
+  --sl-color-gray-3: var(--muted-foreground);
+  --sl-color-gray-4: color-mix(in oklch, var(--muted-foreground), var(--border));
+  --sl-color-gray-5: var(--border);
+  --sl-color-gray-6: var(--muted);
+  --sl-color-gray-7: var(--card);
+  --sl-color-black: var(--background);
+
+  --sl-color-accent: var(--primary);
+  --sl-color-text-accent: var(--primary);
   --sl-color-text-invert: var(--primary-foreground);
+  --sl-color-bg: var(--background);
+  --sl-color-bg-nav: var(--background);
+  --sl-color-bg-sidebar: var(--sidebar);
+  --sl-color-bg-inline-code: var(--muted);
+  --sl-color-hairline-light: var(--border);
   --sl-color-hairline: var(--sidebar-border);
+  --sl-color-hairline-shade: var(--border);
+
+  --sl-color-red: var(--destructive);
+  --sl-color-green: var(--color-success);
+
   --sl-badge-default-bg: var(--primary);
   --sl-badge-default-border: var(--primary);
   --sl-badge-default-text: var(--primary-foreground);
+}
+
+:root {
+  --scale-factor: 1;
+
+  --sl-nav-pad-y: 1.2rem;
   --sl-content-pad-x: 3.5rem;
 
   --sl-text-h1: 2rem;
@@ -80,22 +165,4 @@
   --sl-text-h3: 1.25rem;
   --sl-text-h4: 1.125rem;
   --sl-text-h5: 1rem;
-}
-
-@theme {
-  --color-accent-200: var(--primary);
-  --color-accent-500: var(--primary);
-  --color-accent-600: var(--primary);
-  /* Your preferred gray scale. Zinc is closest to Starlight’s defaults. */
-  --color-gray-50: var(--color-green-50);
-  --color-gray-100: var(--background);
-  --color-gray-200: var(--color-zinc-200);
-  --color-gray-300: var(--color-zinc-300);
-  --color-gray-400: var(--color-zinc-400);
-  --color-gray-500: var(--color-zinc-500);
-  --color-gray-600: var(--color-zinc-600);
-  --color-gray-700: var(--color-zinc-700);
-  --color-gray-800: var(--color-zinc-800);
-  --color-gray-900: var(--color-zinc-900);
-  --color-gray-950: var(--color-zinc-950);
 }

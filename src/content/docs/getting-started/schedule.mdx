@@ -1,29 +1,39 @@
 ---
-title: Schedule your Project
-description: Schedule your Project on your Kaptive Players.
+title: Schedule your project
+description: Schedule your project on your Kaptive Players.
 ---
-## How Scheduling on Kaptive Players Works
 
-You probably already read the chapter on Project assignment. Scheduling is the other way to show content on your Kaptive Players. Instead of assigning one single Project to a Player, you can schedule several Projects in a Schedule. A Schedule is a collection of Projects that are shown on a Player at specific times.
+import { Aside, Steps } from '@astrojs/starlight/components';
 
-When creating a Schedule, you can select which Projects you want to include in the Schedule and when they should be shown on the assigned Players.
+## How scheduling on Kaptive Players works
 
-![Schedule Projects](../../../assets/getting-started/schedule/schedule.png)
+Scheduling shows content on your Kaptive Players at specific times. Instead of showing one default project all the time, you create schedule entries. Each entry plays a project or a [playlist](/getting-started/playlists/) on the players you choose, during a time range that can repeat.
 
-When clicking on a Project in the Schedule, you can select the time range when the Project should be shown and configure its repeating interval. The repetition can only be set when no other scheduled Projects are overlapping in the future.
+Open `Schedule` in the sidebar to see all entries of your workspace in the calendar. Switch between `Week` and `Day` and use `Today` to jump back to the current date. You can filter the calendar by project, player or tag.
 
-![Edit Schedule](../../../assets/getting-started/schedule/edit-schedule.png)
+## Create a schedule entry
 
-You can add as many Projects to a Schedule as you want, but they cannot overlap in time.
+<Steps>
+1. In the calendar, click and drag over the time range the entry should cover.
+2. Choose `Project` or `Playlist`, then select the content.
+3. Under `Assign players`, select the players that show the entry.
+4. Click `Add entry`.
+</Steps>
 
-## Assign a Schedule to a Player
+To change the timing, click the entry in the calendar. In `Edit entry`, you can change the `Date`, the `Start time` and `End time`, or turn on `All day`. Under `Repeat`, choose `Does not repeat`, `Daily` or `Weekly`. For a repeating entry, set when it ends or choose `No end date`. Click `Save` to apply your changes.
 
-After creating a Schedule, you can assign it to a Player by clicking the `Assign` button in the Schedule editor. When a Schedule is assigned to a Player, the Player shows the Projects in the Schedule according to the defined time ranges and repetition settings.
+When you delete a repeating entry, you can delete `This occurrence` or `All occurrences`.
 
-When a Schedule is assigned to a Player, but no Project is scheduled to be shown at the current time, the Player shows the default Project assigned to it. This allows you to have fallback content when no scheduled Projects are active. The default content is configured by assigning a Project to the Player.
+<Aside type="note">Entries can overlap. When two entries for the same player overlap, the player shows the narrower one. This lets you place a short entry inside a longer one, for example a special announcement during the day's regular content.</Aside>
 
-![Schedule Assignment](../../../assets/getting-started/schedule/assign-schedule.png)
+<Aside type="tip">Under `Start script` and `End script`, you can run a script on the player when the entry starts or ends.</Aside>
 
-## Publish Updates of your Schedule
+## Choose the players
 
-When you make changes to a Schedule, you need to publish the changes for them to take effect on the assigned Players. To publish the changes, simply click the orange `Publish` button in the Schedule editor. This updates the Schedule on all the Players that currently have this Schedule assigned to them.
+The schedule is shared by your whole workspace. You choose the target players directly on each entry: when you create or edit an entry, select the players under `Assign players`. Each player then shows the entries that target it, according to their time ranges and repetition settings. You can filter the schedule by player or tag to see what a specific player shows.
+
+When no entry is active for a player at the current time, the player shows its default project. This gives you fallback content outside scheduled time slots. Read how to set the default project in [Assign your project](/getting-started/assign/).
+
+## Publish updates of your schedule
+
+Changes to the schedule are a draft until you publish them. Click the orange `Publish` button in the schedule to update all players right away. To discard your changes, use `Revert` to go back to the published schedule.
